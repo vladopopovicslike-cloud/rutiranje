@@ -418,7 +418,7 @@ def spoji_rute (rute_razvozne, rute_povratne, vehicles, osobine1,osobine2, d,oso
 
                                                                 k=povratna_ruta[-1]
 
-            print "ukupno",ukupno1/1000000, ukupno2/1000000, ukupno3/1000000, ukupno4/1000000, ukupno5/1000000, ukupno6/1000000, ukupno7/1000000, ukupno8/1000000, ukupno9/1000000, broj1,broj2                                                    
+            print("ukupno",ukupno1/1000000, ukupno2/1000000, ukupno3/1000000, ukupno4/1000000, ukupno5/1000000, ukupno6/1000000, ukupno7/1000000, ukupno8/1000000, ukupno9/1000000, broj1,broj2                                                    )
     return (final_male, skup_povratnih_svih)
 
 def tabu_check(ruta, duzina, d, len_razvozne,dio):

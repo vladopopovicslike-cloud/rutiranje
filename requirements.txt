@@ -1,0 +1,28 @@
+# Python 3.12+ Requirements for Rutiranje Project
+# Vehicle Routing Problem optimization algorithms
+
+# Excel file handling
+openpyxl>=3.0.0,<=3.1.5
+xlsxwriter>=3.0.0,<=3.2.9
+
+# Scientific computing and optimization
+numpy>=1.20.0
+scipy>=1.5.0
+pulp>=2.0.0
+
+# Data processing
+simplejson>=3.0.0
+
+# Data visualization (optional but recommended)
+matplotlib>=3.0.0
+
+# Note: mplleaflet has limited version support (max 0.0.5)
+# Install manually if needed: pip install mplleaflet==0.0.5
+
+# Standard library packages (included in Python 3):
+# - datetime (built-in)
+# - itertools (built-in)
+# - pickle (built-in)
+# - random (built-in)
+# - json (built-in)
+# - collections (built-in)

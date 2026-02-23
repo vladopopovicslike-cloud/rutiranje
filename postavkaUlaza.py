@@ -33,10 +33,10 @@ def napravi_seme_neg(randomklijenti_poz,n):
 def napravi_raspodjelu_od_fje(kolicina, sema_p):
     semav1=defaultdict(list)
     for q in kolicina:
-	k=0
-	for i in sema_p[q]:
-	    semav1[q].append(i-k)
-	    k=i
+        k=0
+        for i in sema_p[q]:
+            semav1[q].append(i-k)
+            k=i
     return semav1
 
 def napravi_posebnu(kolicina, sema, semav, nova_raspodela,ws5):
@@ -115,7 +115,7 @@ def posjeta_po_klijentu(kolicina,nova_raspodela, semav,sema, ws5):
         udiou_ukupnom[j]=period[j]/ukupno_svi
             
     posjeta_po_klijentu=sum(period.values())
-    print "Posjeta po klijentu po tipu i periodu", v,"sumarno", v_sum
+    print("Posjeta po klijentu po tipu i periodu", v,"sumarno", v_sum)
     ws5.append(["Posjeta po klijentu po tipu i periodu"])
     ws5.append(["",period[0], period[1], period[2], sum(period.values())])
     for tip in v:
@@ -136,7 +136,7 @@ def pll_po(sema, semav,raspodela, kolicina, ws5):
                     pll_poklijentu_potipu[q][j]+=semav[q][k]*s[j]
                     #print pll_poklijentu[j]
                 k+=1
-    print "PLL po klijentu, tipu i periodu", pll_poklijentu_potipu
+    print("PLL po klijentu, tipu i periodu", pll_poklijentu_potipu)
 
     ws5.append(["Paleta po klijentu po tipu i periodu"])
     ws5.append(["očekivanje", pll_poklijentu[0], pll_poklijentu[1], pll_poklijentu[2], sum(pll_poklijentu.values())])
@@ -216,11 +216,11 @@ def promjene_sumarno(kolicina, sema, semav, sema_novo, semav_novo, sema_prob_nov
     
     ws5.append(["sumarno", u1, u2, u3, u4, u5, u6, u7, u8, u9])
     """
-    print "sumarno", u1, u2, u3, u4, u5, u6
+    print("sumarno", u1, u2, u3, u4, u5, u6)
     print"""
     
 def generisanje_sema(broj_s):
-    wb = load_workbook('G:\My Drive\postavka.xlsx')
+    wb = load_workbook('data/postavka.xlsx')
     ws = wb["List1"];ws1 = wb["List2"]; ws2 = wb["List3"]; ws3 = wb["List4"]; ws4 = wb["List5"];ws5 = wb["List6"];
     randomklijenti= random.sample(range(2, 201), 70)
     sema=defaultdict(list);sema_prob=defaultdict(list);sema_novo=defaultdict(list);sema_prob_novo=defaultdict(list);semav=defaultdict(list);semav_novo=defaultdict(list)
@@ -259,7 +259,7 @@ def generisanje_sema(broj_s):
         k=i;j+=1
 
     for inst in range (broj_s):
-        print inst
+        print(inst)
         promjene=defaultdict(list)
         kolicine_sve=[]; kolona1=[]; kolona2=[]; kolona3=[]; kolona1_novo=[]; kolona2_novo=[]; kolona3_novo=[]
 
@@ -333,9 +333,9 @@ def generisanje_sema(broj_s):
 
             ws3.append([q,brojq,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12])
                 
-        """print"Novi parametri"
-        print posjetapotipuiper_staro, "novo", posjetapotipuiper_staro
-        print pllpotipuiper_staro, "novo", pllpotipuiper_staro"""
+        """print "Novi parametri"
+        print(posjetapotipuiper_staro, "novo", posjetapotipuiper_staro)
+        print(pllpotipuiper_staro, "novo", pllpotipuiper_staro)"""
 
            
         broj_posjeta=defaultdict(list);broj_paleta=defaultdict(list);broj_posjeta_novo=defaultdict(list);broj_paleta_novo=defaultdict(list)
@@ -360,9 +360,9 @@ def generisanje_sema(broj_s):
         br_neg = {1: 15, 2: 15, 3: 15};br_neg_novo = {1: 15, 2: 10, 3: 10}
         (randomklijenti_neg,kolicina_neg,randomklijenti_svi)=napravi_seme_neg(randomklijenti_poz,br_neg)
         (randomklijenti_neg_novo,kolicina_neg_novo,randomklijenti_svi_novo)=napravi_seme_neg(randomklijenti_poz_novo,br_neg_novo)
-        print "negativno"
-        print randomklijenti_neg,kolicina_neg
-        print randomklijenti_neg_novo,kolicina_neg_novo
+        print("negativno")
+        print(randomklijenti_neg,kolicina_neg)
+        print(randomklijenti_neg_novo,kolicina_neg_novo)
         for i in range(1,4):
             sema_kon=[randomklijenti_poz[i],kolicina_poz[i], randomklijenti_neg[i],kolicina_neg[i],randomklijenti_svi[i]]
             sve_seme.append(sema_kon)
@@ -422,15 +422,15 @@ def generisanje_sema(broj_s):
         ws2.append([klijent_pll[1],klijent_pll[2],klijent_pll[3],klijent_pll[4],klijent_pll[5],klijent_pll[6],klijent_pll[7],klijent_pll[8],"novo", klijent_pll_novo[1],klijent_pll_novo[2],klijent_pll_novo[3],klijent_pll_novo[4],klijent_pll_novo[5],klijent_pll_novo[6],klijent_pll_novo[7],klijent_pll_novo[8]])
 
         
-    print len(randomklijenti_poz[1]),len(randomklijenti_poz[2]), len(randomklijenti_poz[3])
-    print len(kolicina_poz[1]),len(kolicina_poz[2]), len(kolicina_poz[3])
-    print len(randomklijenti_poz_novo[1]),len(randomklijenti_poz_novo[2]), len(randomklijenti_poz_novo[3])
-    print len(kolicina_poz_novo[1]),len(kolicina_poz_novo[2]), len(kolicina_poz_novo[3])
+    print(len(randomklijenti_poz[1]),len(randomklijenti_poz[2]), len(randomklijenti_poz[3]))
+    print(len(kolicina_poz[1]),len(kolicina_poz[2]), len(kolicina_poz[3]))
+    print(len(randomklijenti_poz_novo[1]),len(randomklijenti_poz_novo[2]), len(randomklijenti_poz_novo[3]))
+    print(len(kolicina_poz_novo[1]),len(kolicina_poz_novo[2]), len(kolicina_poz_novo[3]))
 
-    print len(randomklijenti_neg[1]),len(randomklijenti_neg[2]), len(randomklijenti_neg[3])
-    print len(kolicina_neg[1]),len(kolicina_neg[2]), len(kolicina_neg[3])
-    print len(randomklijenti_neg_novo[1]),len(randomklijenti_neg_novo[2]), len(randomklijenti_neg_novo[3])
-    print len(kolicina_neg_novo[1]),len(kolicina_neg_novo[2]), len(kolicina_neg_novo[3])
+    print(len(randomklijenti_neg[1]),len(randomklijenti_neg[2]), len(randomklijenti_neg[3]))
+    print(len(kolicina_neg[1]),len(kolicina_neg[2]), len(kolicina_neg[3]))
+    print(len(randomklijenti_neg_novo[1]),len(randomklijenti_neg_novo[2]), len(randomklijenti_neg_novo[3]))
+    print(len(kolicina_neg_novo[1]),len(kolicina_neg_novo[2]), len(kolicina_neg_novo[3]))
     print
     
     semav=napravi_raspodjelu_od_fje(kolicina, sema_prob)
@@ -466,31 +466,31 @@ def generisanje_sema(broj_s):
     """
     #DIO ZA PRORACUN PARAMETARA POSJETA PO STAROM I NOVOM
     
-    print "nova raspodela", nova_raspodela
-    print "Posjeta po klijentu po periodu", po_periodu, po_periodu_novo
-    print "Udio u ukupnom (raspodjela ppk na tri)", udiou_ukupnom, udiou_ukupnom_novo
-    print "Posjeta po klijentu sumarno ", ppk, ppk_novo
+    print("nova raspodela", nova_raspodela)
+    print("Posjeta po klijentu po periodu", po_periodu, po_periodu_novo)
+    print("Udio u ukupnom (raspodjela ppk na tri)", udiou_ukupnom, udiou_ukupnom_novo)
+    print("Posjeta po klijentu sumarno ", ppk, ppk_novo)
     print
 
     #DIO ZA PRORAČUN PLL i POSJETA PARAMETARA
     
-    print "Raspodjela klijenata prema broju paleta-tipu(novo, za staro se zadaje-raspodela): ", tip_pll, tip_pll_novo
-    print "Raspodjela klijenata prema broju posjeta: ",tip, tip_novo
+    print("Raspodjela klijenata prema broju paleta-tipu(novo, za staro se zadaje-raspodela): ", tip_pll, tip_pll_novo)
+    print("Raspodjela klijenata prema broju posjeta: ",tip, tip_novo)
     print
     
     s=sum(pllpo_klijentu.values()); s_novo=sum(pllpo_klijentu_novo.values())
-    print "Paleta po klijentu po periodu:", pllpo_klijentu, pllpo_klijentu_novo; 
-    print "Paleta po klijentu sumarno:",s,s/3, s_novo,s_novo/3
-    print "Paleta po klijentu udio:",pllpo_klijentu[0]/s,pllpo_klijentu[1]/s, pllpo_klijentu[2]/s, "novo", pllpo_klijentu_novo[0]/s_novo,pllpo_klijentu_novo[1]/s_novo, pllpo_klijentu_novo[2]/s_novo 
+    print("Paleta po klijentu po periodu:", pllpo_klijentu, pllpo_klijentu_novo; )
+    print("Paleta po klijentu sumarno:",s,s/3, s_novo,s_novo/3)
+    print("Paleta po klijentu udio:",pllpo_klijentu[0]/s,pllpo_klijentu[1]/s, pllpo_klijentu[2]/s, "novo", pllpo_klijentu_novo[0]/s_novo,pllpo_klijentu_novo[1]/s_novo, pllpo_klijentu_novo[2]/s_novo )
     print
 
     s=sum(pllpo_posjeti.values()); s_novo=sum(pllpo_posjeti_novo.values())
-    print "Paleta po posjeti po periodu:", pllpo_posjeti,pllpo_posjeti_novo;
-    print "Paleta po posjeti sumarno:", s,s/3, s_novo,s_novo/3
+    print("Paleta po posjeti po periodu:", pllpo_posjeti,pllpo_posjeti_novo;)
+    print("Paleta po posjeti sumarno:", s,s/3, s_novo,s_novo/3)
     #print "Paleta po posjeti udio:", pllpo_posjeti[0]/s,pllpo_posjeti[1]/s,pllpo_posjeti[2]/s, "novo", pllpo_posjeti_novo[0]/s_novo,pllpo_posjeti_novo[1]/s_novo,pllpo_posjeti_novo[2]/s_novo
     """
     
-    wb.save('G:\My Drive\postavka.xlsx')
+    wb.save('data/postavka.xlsx')
     return(sve_seme)
 
     # ovo je za staro stanje: pllpo_posjeti- je različito ujutru, u podne i uvece zato je dato kao rjecnik

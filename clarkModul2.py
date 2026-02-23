@@ -4,7 +4,7 @@
     from openpyxl import load_workbook
     #wb = load_workbook(filename = 'D:\Google Drive\Voli_konacno.xlsx');ws = wb['Sheet2']
     import datetime as dt
-    global t
+    global t, solution, currentbestRoute
     #ucitavanje potraznje p za clark wrightov algoritam
     p=[0 for x in range(brojCvorova+1)]
     from collections import defaultdict
@@ -13,7 +13,7 @@
     #for i in range(1,brojCvorova+1):
             #p[j]=ws.cell(row = i, column = 3).value
     #rute_razvoza=defaultdict(list)
-    print "broj gigantski ruta razvoza sa depom kao ciljem: " + str(len(rute_razvoza))
+    print("broj gigantski ruta razvoza sa depom kao ciljem: " + str(len(rute_razvoza)))
 
     class Usteda:
         def __init__ (self, cvori, cvorj,vrednost):
@@ -26,14 +26,9 @@
                                       self.cvori,
                                       self.cvorj,
                                       self.vrednost)
-        def __cmp__(self, other):
+        def __lt__(self, other):
             if hasattr(other, 'vrednost'):
-                c=self.vrednost-other.vrednost    
-                return int(c)
-
-        def __cmp_float__(self, other):
-            if hasattr(other, 'vrednost'):
-                return self.vrednost.__cmp__(other.vrednost)
+                return self.vrednost > other.vrednost
             
     class Route:
         def __init__ (self, rb, fields, duzina):
@@ -67,11 +62,11 @@
             cvorovi.append(i)
 
     def printaj():
-            print " ".join(["{:3d}".format(x) for x in cvorovi])
-            print " ".join(["{:3d}".format(x) for x in izlazniCvorovi])
-            print " ".join(["{:3d}".format(x) for x in ulazniCvorovi])
+            print(" ".join(["{:3d}".format(x) for x in cvorovi]))
+            print(" ".join(["{:3d}".format(x) for x in izlazniCvorovi]))
+            print(" ".join(["{:3d}".format(x) for x in ulazniCvorovi]))
             print ("posjeceni cvorovi")
-            print posjeceniCvorovi
+            print(posjeceniCvorovi)
 
     def sredi1(vezivniCvor):
          index1=0
@@ -125,8 +120,8 @@
             provera=False
             brojrute=-1;iter=0
             #len(fields)-1, -1 je da se ne bi dirala jedinica na kraju
-            for i in xrange(1, len(fields)-1):
-                    for k in xrange(i + 1, len(fields)-1):
+            for i in range(1, len(fields)-1):
+                    for k in range(i + 1, len(fields)-1):
                             brrute = brojrute+1
                             tos=twoOptSwap(fields, i, k)
                             dvaoptduzina=izracunaj_duzinu(tos)
@@ -170,8 +165,8 @@
             #len(fields)-1, -1 je da se ne bi dirala jedinica na kraju niza. Dakle 1, len(fields)-1) znaci da se ne diraju prvi i zadnji element u nizu, a to su jedinice.
             #if t1>2:
                 #print t1, rute_razvoza
-            for i in xrange(1, len(fields)-1):
-                    for k in xrange(i + 1, len(fields)-1):
+            for i in range(1, len(fields)-1):
+                    for k in range(i + 1, len(fields)-1):
                         brojrute = brojrute+1
                         tos=twoOptSwap(fields, i, k)
                         #print tos
@@ -230,9 +225,9 @@
                                     #t[i][k]=t[i][k]-1
                                   
                     c=0
-                    for i in xrange(1, len(fields)):
-                            for k in xrange(i + 1, len(fields)):
-                            #for k in xrange(1, len(fields)):
+                    for i in range(1, len(fields)):
+                            for k in range(i + 1, len(fields)):
+                            #for k in range(1, len(fields)):
                                   if t[fields[i]][fields[k]]>0:
                                             #print fields[i],fields[k],t[fields[i]][fields[k]]
                                             #print fields[k],fields[i],t[fields[k]][fields[i]]
@@ -241,7 +236,7 @@
                                             #t[fields[k]][fields[i]]=t[fields[k]][fields[i]]-1
                     #print iterator, c
 
-                    for i in xrange(1, len(fields)):
+                    for i in range(1, len(fields)):
                         if tabu[i]>0:
                             tabu[i]=tabu[i]-1
                         
@@ -416,7 +411,7 @@
 
         #print (brojac_raz, "taboo rjesenje:" + str(solution.duzina))
         #print solution.duzina
-        print brojac_raz, solution.fields, solution.duzina
+        print(brojac_raz, solution.fields, solution.duzina)
         #print tlong
 
         sfr=[solution.fields]
@@ -432,7 +427,6 @@
         rute_razvoza[tuple(sf)]
         rute_razvoza[tuple(sf_r)]
         brojac_raz+=1
-        global solution
         solution=solution_clark
 
 
@@ -440,7 +434,7 @@
     #print    
     #print  rute_razvoza
 
-    print "ukupan broj gigantskih ruta razvoza: " + str(len(rute_razvoza))
+    print("ukupan broj gigantskih ruta razvoza: " + str(len(rute_razvoza)))
       
     return (rute_razvoza)
 

@@ -28,14 +28,9 @@ def racunaj(d,vector, brojCvorova, fields1, prvic, end_raz, rute_razvoza):
                                       self.cvori,
                                       self.cvorj,
                                       self.vrednost)
-        def __cmp__(self, other):
+        def __lt__(self, other):
             if hasattr(other, 'vrednost'):
-                c=self.vrednost-other.vrednost    
-                return int(c)
-
-        def __cmp_float__(self, other):
-            if hasattr(other, 'vrednost'):
-                return self.vrednost.__cmp__(other.vrednost)
+                return self.vrednost > other.vrednost
             
     class Route:
         def __init__ (self, rb, fields, duzina):
@@ -118,7 +113,7 @@ def racunaj(d,vector, brojCvorova, fields1, prvic, end_raz, rute_razvoza):
         # ne ukljucuje i broj na poziciji k+2, i-1 kaze da uzima od jednog broja prije i, a k+2 do jednog broja poslije k
         newFields[i:k+1] = fields[k:i-1:-1]
         # prvi dio ide od i do k, a drugi od k do i. stavljeno je i-1 da bi upalo i
-        #ovo -1 znaci da se broj unazad, pa onda može da se stavi npr a[6:3:-1], a ne bi moglo samo a[6:3]
+        #ovo -1 znaci da se broj unazad, pa onda moï¿½e da se stavi npr a[6:3:-1], a ne bi moglo samo a[6:3]
         #primjer a=[1,2,3,4,5,6,7,8], i=3, i=6, dobije se a=[1, 2, 3, 7, 6, 5, 4, 8]
         #print "fields2:", newFields[i-1:k+2]
         duzina2=izracunaj_duzinu (newFields[i-1:k+2])
@@ -153,8 +148,8 @@ def racunaj(d,vector, brojCvorova, fields1, prvic, end_raz, rute_razvoza):
             brojrute=-1;iterator=iterator
             dobit=0
             
-            for i in xrange(0, brcv_uruti-1):
-                for k in xrange(i + 2, brcv_uruti-1):
+            for i in range(0, brcv_uruti-1):
+                for k in range(i + 2, brcv_uruti-1):
                     brojrute = brojrute+1
                     #print "0nulti", i+1,k, fields [i+1], fields[k]
                     #gain = c(i, i+1) + c(k, k+1) - c(i, k) - c(i+1, k+1)
@@ -199,8 +194,8 @@ def racunaj(d,vector, brojCvorova, fields1, prvic, end_raz, rute_razvoza):
                     currentbestRoute=Route(brojrute,tosnaj,najduzina)
                     solution=currentbestRoute
                     #print "1prvi", len(fields),brcv_uruti
-                    for i in xrange(1, len(fields)):
-                        for k in xrange(1, len(fields)):
+                    for i in range(1, len(fields)):
+                        for k in range(1, len(fields)):
                                   if t[fields[i]][fields[k]]>0:
                                         t[fields[i]][fields[k]]=t[fields[i]][fields[k]]-1
                                         #t[fields[k]][fields[i]]=t[fields[k]][fields[i]]-1
@@ -216,8 +211,8 @@ def racunaj(d,vector, brojCvorova, fields1, prvic, end_raz, rute_razvoza):
                     nova_duzina=solution.duzina+steta
                     currentbestRoute=Route(brojrute,stosnaj,nova_duzina)
                     #print "2drugi", len(fields),brcv_uruti
-                    for i in xrange(1, len(fields)):
-                        for k in xrange(1, len(fields)):
+                    for i in range(1, len(fields)):
+                        for k in range(1, len(fields)):
                             if t[fields[i]][fields[k]]>0:
                                 t[fields[i]][fields[k]]=t[fields[i]][fields[k]]-1
                                 #t[fields[k]][fields[i]]=t[fields[k]][fields[i]]-1

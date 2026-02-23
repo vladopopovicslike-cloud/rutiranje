@@ -17,14 +17,9 @@
                                       self.cvori,
                                       self.cvorj,
                                       self.vrednost)
-        def __cmp__(self, other):
+        def __lt__(self, other):
             if hasattr(other, 'vrednost'):
-                c=self.vrednost-other.vrednost    
-                return int(c)
-
-        def __cmp_float__(self, other):
-            if hasattr(other, 'vrednost'):
-                return self.vrednost.__cmp__(other.vrednost)
+                return self.vrednost > other.vrednost
             
     class Route:
         def __init__ (self, rb, fields, duzina):
@@ -147,8 +142,8 @@
             brojrute=-1;iterator=iterator
             najrazlika=0
 
-            for i in xrange(0, brcv_uruti-1):
-                for k in xrange(i + 2, brcv_uruti-1):
+            for i in range(0, brcv_uruti-1):
+                for k in range(i + 2, brcv_uruti-1):
                     brojrute = brojrute+1
                     #ovo je za asimetricnu
                     tos, razlika_nova=twoOptSwap_saduzinom(fields, i+1, k)
@@ -182,8 +177,8 @@
                     currentbestRoute=Route(brojrute,tosnaj,najduzina)
                     solution=currentbestRoute
                     
-                    for i in xrange(1, brcv_uruti):
-                            for k in xrange(1, brcv_uruti):
+                    for i in range(1, brcv_uruti):
+                            for k in range(1, brcv_uruti):
                                   if t[fields[i]][fields[k]]>0:
                                         t[fields[i]][fields[k]]=t[fields[i]][fields[k]]-1
  
@@ -201,8 +196,8 @@
                     #Tamo kod povrata nije bilo isto i zato se moralo ostaviti len(fields). Jer je fields bio fields=cw_ruta, a brcv_uruti= len(cw_ruta+[0])
                     # i onda nije moglo da se u fields listi trazi clan koji brcv_uruti-1, jer nije postojao. Zato je tu ostavljeno da brcv_uruti= len(cw_ruta+[0])
                     # jer se moralo zbog maksimalne vrijednosti u fieldsu.
-                    for i in xrange(1, brcv_uruti):
-                        for k in xrange(1, brcv_uruti):
+                    for i in range(1, brcv_uruti):
+                        for k in range(1, brcv_uruti):
                             if t[fields[i]][fields[k]]>0:
                                 t[fields[i]][fields[k]]=t[fields[i]][fields[k]]-1
                     tlong[sknaj][sinaj]+=5000;tlong[sinaj][sknaj]+=5000

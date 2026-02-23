@@ -127,8 +127,8 @@ def izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, ruta
     #print ("Given (cll):" + str(br_koleta) + "    Given (kg):" + str(uk_masa))
     #print ("Capacity (cll):" + str(kapaciteti_voznog_parka (vehicles)[0]) + "    Capacity (kg):" + str(kapaciteti_voznog_parka (vehicles)[1]))
 
-    print pulp.LpStatus[routing_model.status]
-    print pulp.value(routing_model.objective)
+    print(pulp.LpStatus[routing_model.status])
+    print(pulp.value(routing_model.objective))
 
 
     #if prebacivanje==False:
@@ -156,7 +156,7 @@ def printaj_rute(rute_iz_res, osobine, instanca, tip, rute_vozila, broj_ruta, ws
             #print r
             #print rute_iz_res[r]
             ukupno=rute_iz_res[r][3]
-            print r,rute_iz_res[r]
+            print(r,rute_iz_res[r])
             ukupno_trajanje_ruta=ukupno_trajanje_ruta+rute_iz_res[r][10]
             ukupno_trajanje_ui=ukupno_trajanje_ui+abs(rute_iz_res[r][8])
             ukupno_poz_pll=ukupno_poz_pll+rute_iz_res[r][5]
@@ -170,10 +170,10 @@ def printaj_rute(rute_iz_res, osobine, instanca, tip, rute_vozila, broj_ruta, ws
          
     razlika_objective=objective-float(benchmark_objective)
     razlika_br_ruta=ukupno_ruta-int(benchmark_broj_ruta)
-    print "Ukupno ruta: " + str (ukupno_ruta) + " / " + benchmark_broj_ruta
-    print "Objectiv: " + str (objective) + " / " + benchmark_objective
+    print("Ukupno ruta: " + str (ukupno_ruta) + " / " + benchmark_broj_ruta)
+    print("Objectiv: " + str (objective) + " / " + benchmark_objective)
     procenat=str(round((100*(objective-float(benchmark_objective))/float(benchmark_objective)),2))
-    print "Razlika: " + str (objective-float(benchmark_objective)) + " / " + procenat + "%"
+    print("Razlika: " + str (objective-float(benchmark_objective)) + " / " + procenat + "%")
     
     ws3.append([instanca, tip, objective, benchmark_objective, razlika_objective, procenat, ukupno_ruta, razlika_br_ruta, ukupno_klijenata, status, ukupno_mogucih_ruta, ukupno_poz_pll, ukupno_neg_pll, kapacitet, ukupno_trajanje_ui, ukupno_trajanje_voznje, ukupno_trajanje_ruta, calc_time])
 
@@ -216,17 +216,17 @@ def izracunaj_vozila (rute_iz_res, rute_vozila, broj_ruta, vreme_rute, vehicles)
 
     #fracGap=0.2
     size_model.solve(PULP_CBC_CMD(msg=1))
-    print pulp.LpStatus[size_model.status]
-    print pulp.value(size_model.objective)
+    print(pulp.LpStatus[size_model.status])
+    print(pulp.value(size_model.objective))
 
     broj_vozila={}
     for v in broj_ruta:
             broj_vozila[v]=0
             for i in range (1,broj_ruta[v]+1):
                     if z[v,i].value()==1:
-                            print v, i
+                            print(v, i)
                             broj_vozila[v]=broj_vozila[v]+1
                             for route in rute_vozila[v]:
                                     if y[route,i].value()==1:
-                                            print route, rute_iz_res[route][1], rute_iz_res[route][3], rute_iz_res[route][7]
-            print broj_vozila[v] 
+                                            print(route, rute_iz_res[route][1], rute_iz_res[route][3], rute_iz_res[route][7])
+            print(broj_vozila[v] )

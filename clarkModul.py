@@ -23,14 +23,9 @@ def racunaj(d,vector, brojCvorova,t1,t2):
                                       self.cvori,
                                       self.cvorj,
                                       self.vrednost)
-        def __cmp__(self, other):
+        def __lt__(self, other):
             if hasattr(other, 'vrednost'):
-                c=self.vrednost-other.vrednost    
-                return int(c)
-
-        def __cmp_float__(self, other):
-            if hasattr(other, 'vrednost'):
-                return self.vrednost.__cmp__(other.vrednost)
+                return self.vrednost > other.vrednost
             
     class Route:
         def __init__ (self, rb, fields, duzina):
@@ -64,11 +59,11 @@ def racunaj(d,vector, brojCvorova,t1,t2):
             cvorovi.append(i)
 
     def printaj():
-            print " ".join(["{:3d}".format(x) for x in cvorovi])
-            print " ".join(["{:3d}".format(x) for x in izlazniCvorovi])
-            print " ".join(["{:3d}".format(x) for x in ulazniCvorovi])
+            print(" ".join(["{:3d}".format(x) for x in cvorovi]))
+            print(" ".join(["{:3d}".format(x) for x in izlazniCvorovi]))
+            print(" ".join(["{:3d}".format(x) for x in ulazniCvorovi]))
             print ("posjeceni cvorovi")
-            print posjeceniCvorovi
+            print(posjeceniCvorovi)
 
     def sredi1(vezivniCvor):
          index1=0
@@ -120,8 +115,8 @@ def racunaj(d,vector, brojCvorova,t1,t2):
             provera=False
             brojrute=-1;iter=0
             #len(fields)-1, -1 je da se ne bi dirala jedinica na kraju
-            for i in xrange(1, len(fields)-1):
-                    for k in xrange(i + 1, len(fields)-1):
+            for i in range(1, len(fields)-1):
+                    for k in range(i + 1, len(fields)-1):
                             brrute = brojrute+1
                             tos=twoOptSwap(fields, i, k)
                             dvaoptduzina=izracunaj_duzinu(tos)
@@ -162,8 +157,8 @@ def racunaj(d,vector, brojCvorova,t1,t2):
             provera=False
             brojrute=-1;iterator=iterator
             #len(fields)-1, -1 je da se ne bi dirala jedinica na kraju niza. Dakle 1, len(fields)-1) znaci da se ne diraju prvi i zadnji element u nizu, a to su jedinice.
-            for i in xrange(1, len(fields)-1):
-                    for k in xrange(i + 1, len(fields)-1):
+            for i in range(1, len(fields)-1):
+                    for k in range(i + 1, len(fields)-1):
                             brojrute = brojrute+1
                             tos=twoOptSwap(fields, i, k)
                             duz=izracunaj_duzinu(tos)
@@ -203,12 +198,12 @@ def racunaj(d,vector, brojCvorova,t1,t2):
             if provera==True:
                     #t[inaj][knaj]=3
                     #t[knaj][inaj]=3
-                    for i in xrange(1, len(fields)):
-                            for k in xrange(i + 1, len(fields)):
+                    for i in range(1, len(fields)):
+                            for k in range(i + 1, len(fields)):
                                     if t[i][k]>0:
                                             t[i][k]=t[i][k]-1
 
-                    for i in xrange(1, len(fields)):
+                    for i in range(1, len(fields)):
                         if tabu[i]>0:
                             tabu[i]=tabu[i]-1
                         
@@ -335,7 +330,7 @@ def racunaj(d,vector, brojCvorova,t1,t2):
     clark()
 
     print ("clark rjesenje")    
-    print solution.duzina
+    print(solution.duzina)
     #print solution.fields
 
 
@@ -354,7 +349,7 @@ def racunaj(d,vector, brojCvorova,t1,t2):
 
     print ("taboo rjesenje:" + str(solution.duzina))
     #print solution.duzina
-    print solution.fields
+    print(solution.fields)
     #print tlong
 
     sfr=[solution.fields]

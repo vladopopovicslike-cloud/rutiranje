@@ -16,7 +16,7 @@ global a_time,workbook3, tlong
 import pickle, random
 from random import choice
 import numpy as np
-f = open('G:\My Drive\hello_instance.txt','a');f.write("16 paleta ***************************************")
+f = open('data/hello_instance.txt','a');f.write("16 paleta ***************************************")
 
 def print_result(tekst):
         global a_time
@@ -33,10 +33,10 @@ a1=dt.datetime.now()
 #wb1 = load_workbook(filename = 'D:\Google Drive\Matrica_voli.xlsx')
 #wb2 = load_workbook(filename = 'D:\Google Drive\Matrica_voli_time.xlsx')
 """ Učitavaju se instance za tstiranje iz wb, matrica rastojanja iz wb1, matrica vremena iz wb2, a u wb3 se upisuju rezultati za svaku od instanci. """
-wb = load_workbook(filename = 'G:\My Drive\instances_sve.xlsx')
-wb1 = load_workbook(filename = 'G:\My Drive\hello.xlsx')
-wb2 = load_workbook(filename = 'G:\My Drive\hello_time.xlsx')
-wb3 = load_workbook('G:\My Drive\hello_rjesenje.xlsx')
+wb = load_workbook(filename = 'data/instances_sve.xlsx')
+wb1 = load_workbook(filename = 'data/hello.xlsx')
+wb2 = load_workbook(filename = 'data/hello_time.xlsx')
+wb3 = load_workbook('data/hello_rjesenje.xlsx')
 ws3 = wb3["Sheet1"]; ws4 = wb3["Sheet2"]; ws5 = wb3["Sheet3"]; ws6 = wb3["Sheet4"] 
 #instances=["GA1","GA2","GA3","GA4","GB1", "GB2","GB3","GD1"]
 
@@ -49,8 +49,8 @@ instances=["DE1"]
 #To se radi za staro i novo stanje, i za svaki period. 
 
 for sheet in instances:
-        print        
-        print
+        print()        
+        print()
         oznaka=sheet[0:2]
         rute_iz_res=defaultdict(list)
         rute_iz_resui=defaultdict(list)
@@ -67,19 +67,19 @@ for sheet in instances:
         vehicles = {'kombi': (nosivost_cll, 0.0005, 20, 1500, 1, 5)};br_koleta=0
         
         #promijeni sema zapamcena broj !!! i u instance sve kapacitet vozila                
-        print ("krece racunanje VRPB" + sheet)
+        print("krece racunanje VRPB" + sheet)
         brk=200
         vector_opsti=[0 for x in range(brk+1)]
         for i in range(1, brk+1):
                 vector_opsti[i]=[float(ws.cell(row = abs(i), column = 1).value),float(ws.cell(row = abs(i), column = 2).value)]
                 
         #sve_seme=postavkaUlaza.generisanje_sema(1)
-        #file = open('G:\My Drive\sema_zapamcena6', 'wb')
+        #file = open('data/sema_zapamcena6', 'wb')
         #pickle.dump(sve_seme, file)
         #file.close()
         #break
                 
-        file = open('G:\My Drive\sema_zapamcena6', 'rb')
+        file = open('data/sema_zapamcena6', 'rb')
         sve_seme = pickle.load(file)
         #print sve_seme        
         #sve_seme=[1]
@@ -93,7 +93,7 @@ for sheet in instances:
                 s=s+1;strs=str(sh[s]);strws=ws_sema[sh[s]];strws_ui=ws_sema_ui[sh[s]]
                 if sh[s]<10:
                         brt=brt+1; #broj tesiranih podinsaci kao kod. povecava se kad se sema promijeni podinstanca
-                        print "broj testiranih podinstanci:", brt
+                        print("broj testiranih podinstanci:", brt)
                         f.write(str(brt))
                 sheet=str(nosivost_cll)+oznaka+str(brt)
                 f.write(str(brt)+str(sh[s])+"\n")
@@ -112,7 +112,7 @@ for sheet in instances:
                 #(dsv,tsv, zao)=ulazniPodaci.izracunaj_matricu_opstu(ws, ws1, ws2, brojCvorova, -1000000)
                 #vreme_rada=nosivost_cll+((brojCvorova-1)/(br_koleta/nosivost_cll))*100+10000000
                 vreme_rada=9
-                print "vreme rada:",vreme_rada 
+                print("vreme rada:",vreme_rada) 
 
                 """ računanje matrice rastojanja samo za klijente za koje se roba isporučuje + depo (zato stoji nula u argumentu), gdje cvorovi dobijaju nove brojeve koji se smjestaju u listu fields sa prvim clanom skladistem (1) """
                 (d,durations, osobine,broj_klijenata, vector, br_koleta, uk_masa)=ulazniPodaciPrimjer.izracunaj_matricu(ws, ws1, ws2, brk, 0, randomklijenti_poz, kolicine_poz)
@@ -136,7 +136,7 @@ for sheet in instances:
                 rute_razvoza=clarkWright.racunaj(d,rute_razvoza)
                 
                 c_time=dt.datetime.now(); calc_time=(c_time-b_time).seconds 
-                print "trajanje racunanje gigantskih ruta razvoza" + str(calc_time)
+                print("trajanje racunanje gigantskih ruta razvoza" + str(calc_time))
                 
                 #print ("sad se rade gigantske povratne")
                 """Računa se matrica rastojanja između klijenata sa povratom. U ovom slucaju fields se zavrsavaju sa skladistem, tj cvorom 1.
@@ -150,7 +150,7 @@ for sheet in instances:
                 rute_povrata_sortirane=sorted(rute_povrata.items(), key=lambda x: x[1])
                 #print "rute_povrata_sortirane", rute_povrata_sortirane
                 e_time=dt.datetime.now(); calc_time=(e_time-d_time).seconds
-                print "trajanje racunanje gigantskih povratnih" + str(calc_time)
+                print("trajanje racunanje gigantskih povratnih" + str(calc_time))
                 
                 f_time=dt.datetime.now()
                 rute_razvoza_sortirane=sorted(rute_razvoza.items(), key=lambda x: x[1])
@@ -166,9 +166,9 @@ for sheet in instances:
                 
                 #print "cjepkanje povratnih i kalemljenje na razvozne" + str(calc_time)
                                         
-                print "ukupno broj mogucih ruta:"
+                print("ukupno broj mogucih ruta:")
                 ukupno_mogucih_ruta=len(rute_iz_res)
-                print ukupno_mogucih_ruta                
+                print(ukupno_mogucih_ruta)                
 
                 """Ovdje se bira skup najboljih tako da svaki cvor bude samo jednom ukljucen. Jedino sto moze biti problem je da se rijesenje ne moze naci za zadati broj ruta.
                 Ovdje ne treba prebacivati u stare brojeve jer je vec sve vraceno pa je zato False"""
@@ -180,13 +180,13 @@ for sheet in instances:
                 while not status=="Optimal":
                         (frute_iz_res, frute_vozila, fbroj_ruta, fvreme_rute, objective1, status)=LPprogrami1Primjer.izracunaj_rute(randomklijenti_svi, rute_iz_res, vehicles, osobine, False, br_vozila)
                         br_vozila+=1
-                        print status
-                        print br_vozila
+                        print(status)
+                        print(br_vozila)
                         #print array_1d
 
               
                 h_time=dt.datetime.now(); calc_time=(h_time-g_time).seconds
-                print "racubanje rjesenja" + str(calc_time)
+                print("racubanje rjesenja" + str(calc_time))
                 LPprogrami1.printaj_rute(frute_iz_res, zao, sheet, "VRPB"+strs, frute_vozila, fbroj_ruta, strws, objective1, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
 
                 benchm_objective=str(objective1); benchm_broj_ruta=str(fbroj_ruta["kombi"])
@@ -196,17 +196,17 @@ for sheet in instances:
                 
                 #LPprogrami1.printaj_rute(frute_iz_res2, zao, sheet, "VRPB", frute_vozila, fbroj_ruta, ws3, objective, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
                 # ne treba LPprogrami1.izracunaj_vozila(rute_iz_res1, rute_vozila, broj_ruta, vreme_rute, vehicles)
-                wb3.save('G:\My Drive\hello_rjesenje.xlsx')
+                wb3.save('data/hello_rjesenje.xlsx')
                 #crtaj_rute.crtaj(vector_opsti, frute_iz_res)
                 
                 #ZA DIO SA OGRANIČENJEM TRAJANJA UTOVARA I ISTOVARA
-                print
-                print " Sada dio za LP sa ograničenjima"
+                print()
+                print(" Sada dio za LP sa ograničenjima")
                 g_time=dt.datetime.now()
                 (routes2ui,skup_povratnih_svih)=najnovijiDodatak8b9primjer.spoji_rute (rute_razvoza_sortirane, rute_povrata, vehicles, osobine,osobine1, dsv,zao, 3,tsv)
                 rute_iz_resui.update(routes2ui)
                 ukupno_mogucih_ruta=len(rute_iz_resui)
-                print "ukupno broj mogucih ruta:" + str(ukupno_mogucih_ruta)
+                print("ukupno broj mogucih ruta:" + str(ukupno_mogucih_ruta))
 
                 #rute_iz_res = pickle.load(open(damp, 'rb'))
                 status="nemoguce"
@@ -214,11 +214,11 @@ for sheet in instances:
                 #while not status=="Optimal":
                         (frute_iz_res, frute_vozila, fbroj_ruta, fvreme_rute, objective, status)=LPprogrami1aPrimjer.izracunaj_rute(randomklijenti_svi, rute_iz_resui, vehicles, osobine, False, br_vozila)
                         br_vozila+=1
-                        print status
-                        print br_vozila
+                        print(status)
+                        print(br_vozila)
                         
                 h_time=dt.datetime.now(); calc_time=(h_time-g_time).seconds
-                print "racubanje rjesenja" + str(calc_time)
+                print("racubanje rjesenja" + str(calc_time))
                 LPprogrami1.printaj_rute(frute_iz_res, zao, sheet, "VRPBsaUI"+strs, frute_vozila, fbroj_ruta, strws_ui, objective, status, benchm_broj_ruta, str(objective1), ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
                 #(frute_iz_res2, frute_vozila, objective)=Inter_routePrimjer.testiraj(frute_iz_res, vehicles, dsv, zao, vreme_rada)
                 #r_time=dt.datetime.now(); calc_time=(r_time-g_time).seconds
@@ -226,7 +226,7 @@ for sheet in instances:
                 
                 #LPprogrami1.printaj_rute(frute_iz_res2, zao, sheet, "VRPB", frute_vozila, fbroj_ruta, ws3, objective, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
                 # ne treba LPprogrami1.izracunaj_vozila(rute_iz_res1, rute_vozila, broj_ruta, vreme_rute, vehicles)
-                wb3.save('G:\My Drive\hello_rjesenje.xlsx')
+                wb3.save('data/hello_rjesenje.xlsx')
 f.close()
 
 

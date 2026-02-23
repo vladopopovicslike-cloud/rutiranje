@@ -213,7 +213,7 @@ def generisanje_sema(broj_sema):
         randomklijenti_neg = random.sample(randomklijenti_poz, 10)
         for i in range (10):
                 randomklijenti_neg.append(choice([i for i in range(2,201) if i not in randomklijenti_neg]))
-	
+    
         #randomklijenti_neg = random.sample(range(2, 201), 30)
         randomklijenti_neg =[element*(-1) for element in randomklijenti_neg]
         """
