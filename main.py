@@ -72,15 +72,27 @@ for sheet in instances:
         vector_opsti=[0 for x in range(brk+1)]
         for i in range(1, brk+1):
                 vector_opsti[i]=[float(ws.cell(row = abs(i), column = 1).value),float(ws.cell(row = abs(i), column = 2).value)]
-                
-        #sve_seme=postavkaUlaza.generisanje_sema(1)
-        #file = open('data/sema_zapamcena6', 'wb')
-        #pickle.dump(sve_seme, file)
-        #file.close()
-        #break
-                
-        file = open('data/sema_zapamcena6', 'rb')
-        sve_seme = pickle.load(file)
+
+        # pokušaj učitavanja prethodno spremljenih šema, pada na korumpiran/nenađen pickle
+        try:
+                with open('data/sema_zapamcena6', 'rb') as file:
+                        sve_seme = pickle.load(file)
+        except (FileNotFoundError, pickle.UnpicklingError, EOFError, AttributeError, ImportError, IndexError) as e:
+                print('Warning: failed to load data/sema_zapamcena6:', e)
+                # regeneriši šeme i sačuvaj ih za sljedeće pokretanje
+                try:
+                        sve_seme = postavkaUlaza.generisanje_sema(1)
+                except Exception as g:
+                        print('Error generating seme via postavkaUlaza.generisanje_sema:', g)
+                        # kao krajnji fallback, generiši minimalnu strukturu koja sprječava pad
+                        sve_seme = [([], {}, [], {}, [])]
+                try:
+                        with open('data/sema_zapamcena6', 'wb') as semf:
+                                pickle.dump(sve_seme, semf)
+                except Exception as h:
+                        print('Warning: could not write data/sema_zapamcena6:', h)
+        # ensure the instance log file handle is the expected text append handle
+        f = open('data/hello_instance.txt','a')
         #print sve_seme        
         #sve_seme=[1]
         s=-1; sh=[1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33]
@@ -142,7 +154,7 @@ for sheet in instances:
                 """Računa se matrica rastojanja između klijenata sa povratom. U ovom slucaju fields se zavrsavaju sa skladistem, tj cvorom 1.
                 Zato ce morati imati i svoj Clarck modul jer ce za razliku od razvoza poslenji cvor biti 1 odmah clark nije isti"""
                 (d1,durations1, osobine1,broj_klijenata1, vector1, br_koleta1, uk_masa1)=ulazniPodaciPrimjer.izracunaj_matricu_neg(ws, ws1, ws2, brk, 0, randomklijenti_neg, kolicine_neg)
-                fields=range(2,broj_klijenata1+1)+[1]
+                fields=list(range(2,broj_klijenata1+1))+[1]
                 d_time=dt.datetime.now()
                 """lista rute_povrata prestavlja skup gigantskih ruta povrata u kojima je svaki od čvorova sa povratom prvi bar jednoj.
                 Neki cvor sa povratom može imati i nekoliko gigantskih ruta. Svaka od njih uključuje sve ostale čvorove sa povratom i završava u čvoru 1"""

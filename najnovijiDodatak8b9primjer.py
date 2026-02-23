@@ -472,8 +472,8 @@ def tabu_deo (fields, currentbest_duzina, solution_fields, solution_duzina, iter
             steta=500000000
             provera=False
             #print "evo meee", fields
-            for i in xrange(0, len(fields)-1):
-                for k in xrange(i + 2, len(fields)-1):
+            for i in range(0, len(fields)-1):
+                for k in range(i + 2, len(fields)-1):
                     
                     #gain = c(i, i+1) + c(k, k+1) - c(i, k) - c(i+1, k+1)
                     #gain=d[fields[i]][fields[i+1]]+d[fields[k]][fields[k+1]]-d[fields[i]][fields[k]]-d[fields[i+1]][fields[k+1]]
@@ -514,8 +514,8 @@ def tabu_deo (fields, currentbest_duzina, solution_fields, solution_duzina, iter
                     solution_fields=tosnaj
                     solution_duzina=najduzina
 
-                    #for i in xrange(1, len(fields)):
-                            #for k in xrange(1, len(fields)):
+                        #for i in range(1, len(fields)):
+                            #for k in range(1, len(fields)):
                     for a in t:
                         if t[a]>0:
                             t[a]=t[a]-1
@@ -537,7 +537,7 @@ def tabu_deo (fields, currentbest_duzina, solution_fields, solution_duzina, iter
                     
             elif iterator<min(len(fields)-3,2):
             #elif iterator<len(fields)-2:
-                #for i in xrange(1, len(fields)):
+                    #for i in range(1, len(fields)):
                         #for k in xrange(1, len(fields)):
                             #if t[fields[i],fields[k]]>0:
                                 #t[fields[i],fields[k]]=t[fields[i],fields[k]]-1

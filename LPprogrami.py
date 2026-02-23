@@ -54,7 +54,7 @@ def izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, ruta
     #solver = pulp.CPLEX_CMD(path=path_to_cplex)
     #import pulp.solvers as solvers
     #routing_model.writeMPS('L1a.mps')
-    solver=pulp.CPLEX_CMD(msg=True,path=r'C:\Program Files\IBM\ILOG\CPLEX_Studio201\cplex\bin\x64_win64\cplex.exe')
+    solver = PULP_CBC_CMD(msg=1)
     routing_model.solve(solver)
     #routing_model.solve(GLPK_PY())
     #routing_model.solve(PULP_GLPK_CMD(msg=1,maxSeconds=240))
@@ -64,9 +64,9 @@ def izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, ruta
     a4=dt.datetime.now()
     ctime=(a4-a3).seconds
     #print ("Pulp zavrsen. Trajanje:" + str (ctime) )
-    #print pulp.LpStatus[routing_model.status]
+        #print LpStatus[routing_model.status]
     
-    #if pulp.LpStatus[routing_model.status]=="Infeasible":
+        #if LpStatus[routing_model.status]=="Infeasible":
         #print ("ponovo cemo")
         #print pulp.value(routing_model.objective)
         #izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, pulp.value(routing_model.objective))
@@ -156,14 +156,14 @@ def izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, ruta
     #print ("Given (cll):" + str(br_koleta) + "    Given (kg):" + str(uk_masa))
     #print ("Capacity (cll):" + str(kapaciteti_voznog_parka (vehicles)[0]) + "    Capacity (kg):" + str(kapaciteti_voznog_parka (vehicles)[1]))
 
-    #print pulp.LpStatus[routing_model.status]
+    #print LpStatus[routing_model.status]
     #print pulp.value(routing_model.objective)
 
     #if prebacivanje==False:
     #routing_model.writeLP('routing_model3.lp')
     #routing_model.writeMPS('L1.mps')
-        
-    return (rute_iz_res, rute_vozila, broj_ruta, 0, pulp.value(routing_model.objective), pulp.LpStatus[routing_model.status])
+
+    return (rute_iz_res, rute_vozila, broj_ruta, 0, pulp.value(routing_model.objective), LpStatus[routing_model.status])
 
 def printaj_rute(rute_iz_res, osobine, instanca, tip, rute_vozila, broj_ruta, ws3, objective, status, benchmark_broj_ruta,benchmark_objective,ukupnopozineg, pozitivnih,negativnih, kapacitet, taboo, taboo_pov, calc_time):
     ukupno_ruta=0
@@ -226,7 +226,7 @@ def izracunaj_vozila (rute_iz_res, rute_vozila, broj_ruta, vreme_rute, vehicles)
 
     #fracGap=0.2
     size_model.solve(PULP_CBC_CMD(msg=1))
-    print(pulp.LpStatus[size_model.status])
+    print(LpStatus[size_model.status])
     print(pulp.value(size_model.objective))
 
     broj_vozila={}
