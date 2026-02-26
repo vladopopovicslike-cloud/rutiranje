@@ -17,11 +17,11 @@ import datetime as dt
 #vr=28000
 
 t =  [[0 for x in range(200+1)] for y in range(200+1)]
-arbajt=90000;mincll=5.0/60;minfix=10.0/60
+arbajt=9;mincll=5.0/60;minfix=10.0/60
 global opt_ruta, opt_duzina
 def spoji_rute (rute_razvozne, rute_povratne, vehicles, osobine1,osobine2, d,osobine3,vreme_rada,tsv):
     #mj mjerna jedinica za predjeni put ako je 1 onda je metrima, ako je 1000 onda je u km
-    mj=1
+    mj=1000
     vr=vreme_rada
     ukupno1=ukupno2=ukupno3=ukupno4=ukupno5=ukupno6=ukupno7=ukupno8=ukupno9=0; broj1=0; broj2=0
     "ovo je za racunanje proteklog vremena"

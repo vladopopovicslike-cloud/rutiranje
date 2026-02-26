@@ -79,7 +79,7 @@ for sheet in instances:
                         sve_seme = pickle.load(file)
         except (FileNotFoundError, pickle.UnpicklingError, EOFError, AttributeError, ImportError, IndexError) as e:
                 print('Warning: failed to load data/sema_zapamcena6:', e)
-                # regeneriši šeme i sačuvaj ih za sljedeće pokretanje
+                """# regeneriši šeme i sačuvaj ih za sljedeće pokretanje
                 try:
                         sve_seme = postavkaUlaza.generisanje_sema(1)
                 except Exception as g:
@@ -91,7 +91,7 @@ for sheet in instances:
                                 pickle.dump(sve_seme, semf)
                 except Exception as h:
                         print('Warning: could not write data/sema_zapamcena6:', h)
-        # ensure the instance log file handle is the expected text append handle
+        # ensure the instance log file handle is the expected text append handle"""
         f = open('data/hello_instance.txt','a')
         #print sve_seme        
         #sve_seme=[1]

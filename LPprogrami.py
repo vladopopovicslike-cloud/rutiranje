@@ -36,7 +36,7 @@ def izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, ruta
         routing_model += LpAffineExpression((x[route],1) for route in routes
                                     if guest in route[0]) == 1
         
-    routing_model += LpAffineExpression((x[route],1) for route in routes)==rutabroj
+    #routing_model += LpAffineExpression((x[route],1) for route in routes)==rutabroj
 
     ##for route in routes:
         ##routing_model += x[route]*routes[route][6] <= 100000

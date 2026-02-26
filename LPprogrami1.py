@@ -43,7 +43,7 @@ def izracunaj_rute(broj_klijenata, routes, vehicles, osobine, prebacivanje, ruta
         routing_model += LpAffineExpression((x[key],1) for key in keys
                                     if guest in dictOfroutes[key][0]) == 1
         
-    routing_model += LpAffineExpression((x[key],1) for key in keys)==rutabroj
+    #routing_model += LpAffineExpression((x[key],1) for key in keys)==rutabroj
     
     #for key in keys:
         #routing_model += x[key]*routes[dictOfroutes[key]][8]<=3
