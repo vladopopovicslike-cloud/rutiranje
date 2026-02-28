@@ -1,0 +1,3983 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ab5dbddad502022cf5ef9fec082a5d38 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ab5dbddad502022cf5ef9fec082a5d38" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ab5dbddad502022cf5ef9fec082a5d38 = L.map(
+                "map_ab5dbddad502022cf5ef9fec082a5d38",
+                {
+                    center: [44.46128898108395, 20.49587322548372],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7bbc20fa05c021ecb0246bec4f294951 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7bbc20fa05c021ecb0246bec4f294951.addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var poly_line_137ded794ffc53e3e3f8c3cb268e602f = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [45.145136, 20.084396], [45.615303, 20.046104], [45.2600715051, 19.8140949011], [45.2600715051, 19.8140949011], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_fe0f3474c7115e0f4ca1798f959cbf9c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_74070d1b69243988cd7d677614ed6fcd = $(`<div id="html_74070d1b69243988cd7d677614ed6fcd" style="width: 100.0%; height: 100.0%;">Ruta 1</div>`)[0];
+                popup_fe0f3474c7115e0f4ca1798f959cbf9c.setContent(html_74070d1b69243988cd7d677614ed6fcd);
+            
+        
+
+        poly_line_137ded794ffc53e3e3f8c3cb268e602f.bindPopup(popup_fe0f3474c7115e0f4ca1798f959cbf9c)
+        ;
+
+        
+    
+    
+            var circle_marker_77ad44126f4445b3044bd31cf58d06db = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_1424fa2ea7ed27aa66b2c0f1861d7fbb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6525990d97ff615f991e0f40cb0effd = $(`<div id="html_d6525990d97ff615f991e0f40cb0effd" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 1</div>`)[0];
+                popup_1424fa2ea7ed27aa66b2c0f1861d7fbb.setContent(html_d6525990d97ff615f991e0f40cb0effd);
+            
+        
+
+        circle_marker_77ad44126f4445b3044bd31cf58d06db.bindPopup(popup_1424fa2ea7ed27aa66b2c0f1861d7fbb)
+        ;
+
+        
+    
+    
+            var marker_9ef2d82fef20b79bde19ee2f1443b36a = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ce6e304206048780ca81c36a4fff1651 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba4d30c7c7dca68d27795a71cbc73adc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_756c726183b8e2f0203b2552113dd0c9 = $(`<div id="html_756c726183b8e2f0203b2552113dd0c9" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_ba4d30c7c7dca68d27795a71cbc73adc.setContent(html_756c726183b8e2f0203b2552113dd0c9);
+            
+        
+
+        marker_9ef2d82fef20b79bde19ee2f1443b36a.bindPopup(popup_ba4d30c7c7dca68d27795a71cbc73adc)
+        ;
+
+        
+    
+    
+                marker_9ef2d82fef20b79bde19ee2f1443b36a.setIcon(icon_ce6e304206048780ca81c36a4fff1651);
+            
+    
+            var circle_marker_8192ed19a5296ca738c3a87526befdad = L.circleMarker(
+                [45.145136, 20.084396],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_ebcb277b6a8612659f88ffd3e267ed28 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7687a8492b0ae4d43a4928a3776f19ce = $(`<div id="html_7687a8492b0ae4d43a4928a3776f19ce" style="width: 100.0%; height: 100.0%;"><b>Čvor 172</b><br>Ruta: 1</div>`)[0];
+                popup_ebcb277b6a8612659f88ffd3e267ed28.setContent(html_7687a8492b0ae4d43a4928a3776f19ce);
+            
+        
+
+        circle_marker_8192ed19a5296ca738c3a87526befdad.bindPopup(popup_ebcb277b6a8612659f88ffd3e267ed28)
+        ;
+
+        
+    
+    
+            var marker_7cee6b160174e10e5b77e1d08717cfd9 = L.marker(
+                [45.145136, 20.084396],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_3e85952ba75e591aa22527d439e18562 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9248f075695ea363e808c63cc8ea0e8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9443b1bfe75801303ad1497c4634ec6 = $(`<div id="html_f9443b1bfe75801303ad1497c4634ec6" style="width: 100.0%; height: 100.0%;">172</div>`)[0];
+                popup_9248f075695ea363e808c63cc8ea0e8a.setContent(html_f9443b1bfe75801303ad1497c4634ec6);
+            
+        
+
+        marker_7cee6b160174e10e5b77e1d08717cfd9.bindPopup(popup_9248f075695ea363e808c63cc8ea0e8a)
+        ;
+
+        
+    
+    
+                marker_7cee6b160174e10e5b77e1d08717cfd9.setIcon(icon_3e85952ba75e591aa22527d439e18562);
+            
+    
+            var circle_marker_049f399a34f63250d7fe01eef3c96b80 = L.circleMarker(
+                [45.615303, 20.046104],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_c4e7d8e4968dfea0d62e3e40452b419c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9d2aacfc11a250622eb392a2adb05dd = $(`<div id="html_f9d2aacfc11a250622eb392a2adb05dd" style="width: 100.0%; height: 100.0%;"><b>Čvor 8</b><br>Ruta: 1</div>`)[0];
+                popup_c4e7d8e4968dfea0d62e3e40452b419c.setContent(html_f9d2aacfc11a250622eb392a2adb05dd);
+            
+        
+
+        circle_marker_049f399a34f63250d7fe01eef3c96b80.bindPopup(popup_c4e7d8e4968dfea0d62e3e40452b419c)
+        ;
+
+        
+    
+    
+            var marker_594101a9cad9c4cbcca20627638dd281 = L.marker(
+                [45.615303, 20.046104],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_f4fe9a38091cc3442131b24e05ad2ba3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_549359d26f1617e29ba30e786f826a45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc8b1ae8af0ff209214342f553e24854 = $(`<div id="html_fc8b1ae8af0ff209214342f553e24854" style="width: 100.0%; height: 100.0%;">8</div>`)[0];
+                popup_549359d26f1617e29ba30e786f826a45.setContent(html_fc8b1ae8af0ff209214342f553e24854);
+            
+        
+
+        marker_594101a9cad9c4cbcca20627638dd281.bindPopup(popup_549359d26f1617e29ba30e786f826a45)
+        ;
+
+        
+    
+    
+                marker_594101a9cad9c4cbcca20627638dd281.setIcon(icon_f4fe9a38091cc3442131b24e05ad2ba3);
+            
+    
+            var circle_marker_e9d6887800fb03138a26477ae2772e8c = L.circleMarker(
+                [45.2600715051, 19.8140949011],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_b255440cccb44f366c1d2aadce2d973b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb41f1d5f8b0de8f8c78408f8b403122 = $(`<div id="html_eb41f1d5f8b0de8f8c78408f8b403122" style="width: 100.0%; height: 100.0%;"><b>Čvor 147</b><br>Ruta: 1</div>`)[0];
+                popup_b255440cccb44f366c1d2aadce2d973b.setContent(html_eb41f1d5f8b0de8f8c78408f8b403122);
+            
+        
+
+        circle_marker_e9d6887800fb03138a26477ae2772e8c.bindPopup(popup_b255440cccb44f366c1d2aadce2d973b)
+        ;
+
+        
+    
+    
+            var marker_76d60690822fd03a689431f124bfb944 = L.marker(
+                [45.2600715051, 19.8140949011],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_c83ed1a8d2a56bf9056673d31febf445 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf7c78e3dac7ed1832869aa68ea1f7ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_158ef005057476ac00bea6f3f9983bb8 = $(`<div id="html_158ef005057476ac00bea6f3f9983bb8" style="width: 100.0%; height: 100.0%;">147</div>`)[0];
+                popup_cf7c78e3dac7ed1832869aa68ea1f7ab.setContent(html_158ef005057476ac00bea6f3f9983bb8);
+            
+        
+
+        marker_76d60690822fd03a689431f124bfb944.bindPopup(popup_cf7c78e3dac7ed1832869aa68ea1f7ab)
+        ;
+
+        
+    
+    
+                marker_76d60690822fd03a689431f124bfb944.setIcon(icon_c83ed1a8d2a56bf9056673d31febf445);
+            
+    
+            var circle_marker_9ad41683f3ef9daea9ea2ee3fbfa4f30 = L.circleMarker(
+                [45.2600715051, 19.8140949011],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_f9d483fecf9c26a7ab1f36f444d08f32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_646fa75ef339f9cbbe4a0ee221f5427b = $(`<div id="html_646fa75ef339f9cbbe4a0ee221f5427b" style="width: 100.0%; height: 100.0%;"><b>Čvor 147</b><br>Ruta: 1</div>`)[0];
+                popup_f9d483fecf9c26a7ab1f36f444d08f32.setContent(html_646fa75ef339f9cbbe4a0ee221f5427b);
+            
+        
+
+        circle_marker_9ad41683f3ef9daea9ea2ee3fbfa4f30.bindPopup(popup_f9d483fecf9c26a7ab1f36f444d08f32)
+        ;
+
+        
+    
+    
+            var marker_6cd98fd8b38def4d1855ad2955982514 = L.marker(
+                [45.2600715051, 19.8140949011],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_bfb6bd45083b0356bea78ac4c0ee9462 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b4c74e7c8588e15505e930892a7f731 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2a61583ed4dfb809842d182e4c8df12 = $(`<div id="html_b2a61583ed4dfb809842d182e4c8df12" style="width: 100.0%; height: 100.0%;">147</div>`)[0];
+                popup_3b4c74e7c8588e15505e930892a7f731.setContent(html_b2a61583ed4dfb809842d182e4c8df12);
+            
+        
+
+        marker_6cd98fd8b38def4d1855ad2955982514.bindPopup(popup_3b4c74e7c8588e15505e930892a7f731)
+        ;
+
+        
+    
+    
+                marker_6cd98fd8b38def4d1855ad2955982514.setIcon(icon_bfb6bd45083b0356bea78ac4c0ee9462);
+            
+    
+            var circle_marker_70234815ecb7d4958d45bbfb9698ba54 = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_5c77c13e1ec8fe24c2165322704f1b0e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_692ffac2d2ec4fd4f39ce8be6d2a2b57 = $(`<div id="html_692ffac2d2ec4fd4f39ce8be6d2a2b57" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 1</div>`)[0];
+                popup_5c77c13e1ec8fe24c2165322704f1b0e.setContent(html_692ffac2d2ec4fd4f39ce8be6d2a2b57);
+            
+        
+
+        circle_marker_70234815ecb7d4958d45bbfb9698ba54.bindPopup(popup_5c77c13e1ec8fe24c2165322704f1b0e)
+        ;
+
+        
+    
+    
+            var marker_9d034053cbf1df9b6d6c311c57d45f63 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_5f404dc7b0d61b245914ff41b1d00c75 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2968d2e41cd6b2c6af20be4914b2acf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f11bc8b26902c1b50893c5de020063d = $(`<div id="html_4f11bc8b26902c1b50893c5de020063d" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_2968d2e41cd6b2c6af20be4914b2acf6.setContent(html_4f11bc8b26902c1b50893c5de020063d);
+            
+        
+
+        marker_9d034053cbf1df9b6d6c311c57d45f63.bindPopup(popup_2968d2e41cd6b2c6af20be4914b2acf6)
+        ;
+
+        
+    
+    
+                marker_9d034053cbf1df9b6d6c311c57d45f63.setIcon(icon_5f404dc7b0d61b245914ff41b1d00c75);
+            
+    
+            var poly_line_1c1f0df2fa660b038e3caffde07619fa = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [44.933712, 19.91603], [45.036154, 19.449023], [44.8762783321, 20.1867341995], [44.838114851, 20.2152299881], [44.8242821427, 20.2247142792], [44.7910792343, 20.2704030275], [44.7908584266, 20.2691745758], [44.8607171049, 20.6701219082], [44.8843443341, 20.6621289253], [44.6641966766, 20.3540611267], [44.658196, 20.204941], [44.658196, 20.204941], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_34f77a19079ed12321e9bdc7effa9da0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fabb57e02094fe5701dcc7bd2e0a30f4 = $(`<div id="html_fabb57e02094fe5701dcc7bd2e0a30f4" style="width: 100.0%; height: 100.0%;">Ruta 2</div>`)[0];
+                popup_34f77a19079ed12321e9bdc7effa9da0.setContent(html_fabb57e02094fe5701dcc7bd2e0a30f4);
+            
+        
+
+        poly_line_1c1f0df2fa660b038e3caffde07619fa.bindPopup(popup_34f77a19079ed12321e9bdc7effa9da0)
+        ;
+
+        
+    
+    
+            var circle_marker_0c0980e3444b0b90cbab56ffad95f1f1 = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_9bd7083d081ae6298fc4ba4cdc2b36c2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0b0812bba2805e8b3d079929a75eaae1 = $(`<div id="html_0b0812bba2805e8b3d079929a75eaae1" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 2</div>`)[0];
+                popup_9bd7083d081ae6298fc4ba4cdc2b36c2.setContent(html_0b0812bba2805e8b3d079929a75eaae1);
+            
+        
+
+        circle_marker_0c0980e3444b0b90cbab56ffad95f1f1.bindPopup(popup_9bd7083d081ae6298fc4ba4cdc2b36c2)
+        ;
+
+        
+    
+    
+            var marker_33307834e2724c5856b8cada49158791 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_2bee366d20a57ff994c9f07aaf99c641 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea66f69ea80fcfd15e88d7ff240b10f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36ca9329800aeae933434b4f6f4a0f95 = $(`<div id="html_36ca9329800aeae933434b4f6f4a0f95" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_ea66f69ea80fcfd15e88d7ff240b10f3.setContent(html_36ca9329800aeae933434b4f6f4a0f95);
+            
+        
+
+        marker_33307834e2724c5856b8cada49158791.bindPopup(popup_ea66f69ea80fcfd15e88d7ff240b10f3)
+        ;
+
+        
+    
+    
+                marker_33307834e2724c5856b8cada49158791.setIcon(icon_2bee366d20a57ff994c9f07aaf99c641);
+            
+    
+            var circle_marker_c13ed4aeb43a340e89cee855dec2b6df = L.circleMarker(
+                [44.933712, 19.91603],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_a29e94d1b2bab4e0fb108978d64ce79d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69a3f94b1fc827c85a3741ed87506699 = $(`<div id="html_69a3f94b1fc827c85a3741ed87506699" style="width: 100.0%; height: 100.0%;"><b>Čvor 187</b><br>Ruta: 2</div>`)[0];
+                popup_a29e94d1b2bab4e0fb108978d64ce79d.setContent(html_69a3f94b1fc827c85a3741ed87506699);
+            
+        
+
+        circle_marker_c13ed4aeb43a340e89cee855dec2b6df.bindPopup(popup_a29e94d1b2bab4e0fb108978d64ce79d)
+        ;
+
+        
+    
+    
+            var marker_12c49585bccf4baa3e15fdd93c94ae14 = L.marker(
+                [44.933712, 19.91603],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_23f10e088bca3d7eab688b3b8d81ad6e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f27b82230433a73acc9512d43acfa39b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_781214581965974842e86a1e78a9e9a5 = $(`<div id="html_781214581965974842e86a1e78a9e9a5" style="width: 100.0%; height: 100.0%;">187</div>`)[0];
+                popup_f27b82230433a73acc9512d43acfa39b.setContent(html_781214581965974842e86a1e78a9e9a5);
+            
+        
+
+        marker_12c49585bccf4baa3e15fdd93c94ae14.bindPopup(popup_f27b82230433a73acc9512d43acfa39b)
+        ;
+
+        
+    
+    
+                marker_12c49585bccf4baa3e15fdd93c94ae14.setIcon(icon_23f10e088bca3d7eab688b3b8d81ad6e);
+            
+    
+            var circle_marker_5fcfb7a8e42c6efeccd146feebc732e7 = L.circleMarker(
+                [45.036154, 19.449023],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_9489a105c90dc42bf67d76501d9ff75f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1545448d3fbad79375570f6916ed6cb5 = $(`<div id="html_1545448d3fbad79375570f6916ed6cb5" style="width: 100.0%; height: 100.0%;"><b>Čvor 169</b><br>Ruta: 2</div>`)[0];
+                popup_9489a105c90dc42bf67d76501d9ff75f.setContent(html_1545448d3fbad79375570f6916ed6cb5);
+            
+        
+
+        circle_marker_5fcfb7a8e42c6efeccd146feebc732e7.bindPopup(popup_9489a105c90dc42bf67d76501d9ff75f)
+        ;
+
+        
+    
+    
+            var marker_ef89f9f9c9af2e19f52fcf355de5b89a = L.marker(
+                [45.036154, 19.449023],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_7ac27f8e80e75faa5ac9eb31b1b91f82 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d3460be4e80b3391b5b66d4bc9db72e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f20abeec904582a6b708db78f3155e40 = $(`<div id="html_f20abeec904582a6b708db78f3155e40" style="width: 100.0%; height: 100.0%;">169</div>`)[0];
+                popup_8d3460be4e80b3391b5b66d4bc9db72e.setContent(html_f20abeec904582a6b708db78f3155e40);
+            
+        
+
+        marker_ef89f9f9c9af2e19f52fcf355de5b89a.bindPopup(popup_8d3460be4e80b3391b5b66d4bc9db72e)
+        ;
+
+        
+    
+    
+                marker_ef89f9f9c9af2e19f52fcf355de5b89a.setIcon(icon_7ac27f8e80e75faa5ac9eb31b1b91f82);
+            
+    
+            var circle_marker_89d71237e78c2da97cf9e25aab653ec0 = L.circleMarker(
+                [44.8762783321, 20.1867341995],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_96e6ee64de17a6628fd6bdd78186be7a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52f6d4ff785ee30b8cbaf42d8b705e0c = $(`<div id="html_52f6d4ff785ee30b8cbaf42d8b705e0c" style="width: 100.0%; height: 100.0%;"><b>Čvor 64</b><br>Ruta: 2</div>`)[0];
+                popup_96e6ee64de17a6628fd6bdd78186be7a.setContent(html_52f6d4ff785ee30b8cbaf42d8b705e0c);
+            
+        
+
+        circle_marker_89d71237e78c2da97cf9e25aab653ec0.bindPopup(popup_96e6ee64de17a6628fd6bdd78186be7a)
+        ;
+
+        
+    
+    
+            var marker_dbaf949095caf3856f9188c2e5c8f07e = L.marker(
+                [44.8762783321, 20.1867341995],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_9c51cf8f04a8cfd2930659c32b4c5513 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b10c2627965de4daa6ef0e16fd4e1efd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce97b6838065d0ba6636cfad3c80ac35 = $(`<div id="html_ce97b6838065d0ba6636cfad3c80ac35" style="width: 100.0%; height: 100.0%;">64</div>`)[0];
+                popup_b10c2627965de4daa6ef0e16fd4e1efd.setContent(html_ce97b6838065d0ba6636cfad3c80ac35);
+            
+        
+
+        marker_dbaf949095caf3856f9188c2e5c8f07e.bindPopup(popup_b10c2627965de4daa6ef0e16fd4e1efd)
+        ;
+
+        
+    
+    
+                marker_dbaf949095caf3856f9188c2e5c8f07e.setIcon(icon_9c51cf8f04a8cfd2930659c32b4c5513);
+            
+    
+            var circle_marker_6712d360f9e0aae1de7f7a85f1f9a08a = L.circleMarker(
+                [44.838114851, 20.2152299881],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_853d1a0e84c57a3295f4177b599e60df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_93e36dd111d5705e684460ff5ab90024 = $(`<div id="html_93e36dd111d5705e684460ff5ab90024" style="width: 100.0%; height: 100.0%;"><b>Čvor 55</b><br>Ruta: 2</div>`)[0];
+                popup_853d1a0e84c57a3295f4177b599e60df.setContent(html_93e36dd111d5705e684460ff5ab90024);
+            
+        
+
+        circle_marker_6712d360f9e0aae1de7f7a85f1f9a08a.bindPopup(popup_853d1a0e84c57a3295f4177b599e60df)
+        ;
+
+        
+    
+    
+            var marker_4917774ddb79fd8f2c65f601c06ef5de = L.marker(
+                [44.838114851, 20.2152299881],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_f7abef3a7ac69c259a0031b39db3e6e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dfd13b7696bd9d4eb945c91dd9cd4bfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72ecde412489ad2d5dfcf4428323fd48 = $(`<div id="html_72ecde412489ad2d5dfcf4428323fd48" style="width: 100.0%; height: 100.0%;">55</div>`)[0];
+                popup_dfd13b7696bd9d4eb945c91dd9cd4bfd.setContent(html_72ecde412489ad2d5dfcf4428323fd48);
+            
+        
+
+        marker_4917774ddb79fd8f2c65f601c06ef5de.bindPopup(popup_dfd13b7696bd9d4eb945c91dd9cd4bfd)
+        ;
+
+        
+    
+    
+                marker_4917774ddb79fd8f2c65f601c06ef5de.setIcon(icon_f7abef3a7ac69c259a0031b39db3e6e5);
+            
+    
+            var circle_marker_47ee18713fe6217618014f5cfd2f20d0 = L.circleMarker(
+                [44.8242821427, 20.2247142792],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_e06fdf252035196f7374d43281783dcc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44481b582083100a1bc9040ec85f5a3f = $(`<div id="html_44481b582083100a1bc9040ec85f5a3f" style="width: 100.0%; height: 100.0%;"><b>Čvor 54</b><br>Ruta: 2</div>`)[0];
+                popup_e06fdf252035196f7374d43281783dcc.setContent(html_44481b582083100a1bc9040ec85f5a3f);
+            
+        
+
+        circle_marker_47ee18713fe6217618014f5cfd2f20d0.bindPopup(popup_e06fdf252035196f7374d43281783dcc)
+        ;
+
+        
+    
+    
+            var marker_6fad8e21ec2d94bbac07d4faa624c6d9 = L.marker(
+                [44.8242821427, 20.2247142792],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_2f56f84c7861c915738aea8733447354 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d77ea95a006e304a1ce38b5f2595d09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19d13b3a84fba363e487e46fd0ca25a5 = $(`<div id="html_19d13b3a84fba363e487e46fd0ca25a5" style="width: 100.0%; height: 100.0%;">54</div>`)[0];
+                popup_5d77ea95a006e304a1ce38b5f2595d09.setContent(html_19d13b3a84fba363e487e46fd0ca25a5);
+            
+        
+
+        marker_6fad8e21ec2d94bbac07d4faa624c6d9.bindPopup(popup_5d77ea95a006e304a1ce38b5f2595d09)
+        ;
+
+        
+    
+    
+                marker_6fad8e21ec2d94bbac07d4faa624c6d9.setIcon(icon_2f56f84c7861c915738aea8733447354);
+            
+    
+            var circle_marker_fbbac89a84d14b6438fd0ada21aef697 = L.circleMarker(
+                [44.7910792343, 20.2704030275],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_f450da6054e335632ee266919e5eb7aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30756d2da4b7f8de563cca7df42d7026 = $(`<div id="html_30756d2da4b7f8de563cca7df42d7026" style="width: 100.0%; height: 100.0%;"><b>Čvor 60</b><br>Ruta: 2</div>`)[0];
+                popup_f450da6054e335632ee266919e5eb7aa.setContent(html_30756d2da4b7f8de563cca7df42d7026);
+            
+        
+
+        circle_marker_fbbac89a84d14b6438fd0ada21aef697.bindPopup(popup_f450da6054e335632ee266919e5eb7aa)
+        ;
+
+        
+    
+    
+            var marker_fcaa2c403811b3468ae3de6994052abd = L.marker(
+                [44.7910792343, 20.2704030275],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_b8e8d63cfeb109a2b30194e869515795 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fb29b651c628cdef04561e4271b38e7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0d8b7350448b5ccb56434ce72fe7201 = $(`<div id="html_e0d8b7350448b5ccb56434ce72fe7201" style="width: 100.0%; height: 100.0%;">60</div>`)[0];
+                popup_2fb29b651c628cdef04561e4271b38e7.setContent(html_e0d8b7350448b5ccb56434ce72fe7201);
+            
+        
+
+        marker_fcaa2c403811b3468ae3de6994052abd.bindPopup(popup_2fb29b651c628cdef04561e4271b38e7)
+        ;
+
+        
+    
+    
+                marker_fcaa2c403811b3468ae3de6994052abd.setIcon(icon_b8e8d63cfeb109a2b30194e869515795);
+            
+    
+            var circle_marker_a693bb40ef9cb7f7d526191217d7b52c = L.circleMarker(
+                [44.7908584266, 20.2691745758],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_f538d61c6c2fb2bdd140df4a268152d3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcc6adbb852c5a37d35415c89b329698 = $(`<div id="html_fcc6adbb852c5a37d35415c89b329698" style="width: 100.0%; height: 100.0%;"><b>Čvor 61</b><br>Ruta: 2</div>`)[0];
+                popup_f538d61c6c2fb2bdd140df4a268152d3.setContent(html_fcc6adbb852c5a37d35415c89b329698);
+            
+        
+
+        circle_marker_a693bb40ef9cb7f7d526191217d7b52c.bindPopup(popup_f538d61c6c2fb2bdd140df4a268152d3)
+        ;
+
+        
+    
+    
+            var marker_d29d9b10320ad1aa9b00fe4f2c1067ed = L.marker(
+                [44.7908584266, 20.2691745758],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_267733ec4917660c1e9e54658c560b95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_60b89e316b22ead84a9428b87f059379 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f29325087df87ad7881fe780189db56 = $(`<div id="html_8f29325087df87ad7881fe780189db56" style="width: 100.0%; height: 100.0%;">61</div>`)[0];
+                popup_60b89e316b22ead84a9428b87f059379.setContent(html_8f29325087df87ad7881fe780189db56);
+            
+        
+
+        marker_d29d9b10320ad1aa9b00fe4f2c1067ed.bindPopup(popup_60b89e316b22ead84a9428b87f059379)
+        ;
+
+        
+    
+    
+                marker_d29d9b10320ad1aa9b00fe4f2c1067ed.setIcon(icon_267733ec4917660c1e9e54658c560b95);
+            
+    
+            var circle_marker_2f51024cf9841e97184c4d7274c3873c = L.circleMarker(
+                [44.8607171049, 20.6701219082],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_cd1ea575bf9873e5c51610f526c6718c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_607b422fc4694766b009da852c18596d = $(`<div id="html_607b422fc4694766b009da852c18596d" style="width: 100.0%; height: 100.0%;"><b>Čvor 131</b><br>Ruta: 2</div>`)[0];
+                popup_cd1ea575bf9873e5c51610f526c6718c.setContent(html_607b422fc4694766b009da852c18596d);
+            
+        
+
+        circle_marker_2f51024cf9841e97184c4d7274c3873c.bindPopup(popup_cd1ea575bf9873e5c51610f526c6718c)
+        ;
+
+        
+    
+    
+            var marker_cb4a5c7b1c8b83453067e388c6d8ebfd = L.marker(
+                [44.8607171049, 20.6701219082],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_9a48dbc43c8c9ae95d74284cc89f6a16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f0ccb4d5ed4972aaec891579af3be93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87acd39af60132cfd65e4b7ce56a013f = $(`<div id="html_87acd39af60132cfd65e4b7ce56a013f" style="width: 100.0%; height: 100.0%;">131</div>`)[0];
+                popup_2f0ccb4d5ed4972aaec891579af3be93.setContent(html_87acd39af60132cfd65e4b7ce56a013f);
+            
+        
+
+        marker_cb4a5c7b1c8b83453067e388c6d8ebfd.bindPopup(popup_2f0ccb4d5ed4972aaec891579af3be93)
+        ;
+
+        
+    
+    
+                marker_cb4a5c7b1c8b83453067e388c6d8ebfd.setIcon(icon_9a48dbc43c8c9ae95d74284cc89f6a16);
+            
+    
+            var circle_marker_7edde1be91d55af1f6e87a8dda3e0112 = L.circleMarker(
+                [44.8843443341, 20.6621289253],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_26a942d5f435dcd86a68bcbbd1e9ec14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30da50a5181db89fa0f28380d3fad737 = $(`<div id="html_30da50a5181db89fa0f28380d3fad737" style="width: 100.0%; height: 100.0%;"><b>Čvor 153</b><br>Ruta: 2</div>`)[0];
+                popup_26a942d5f435dcd86a68bcbbd1e9ec14.setContent(html_30da50a5181db89fa0f28380d3fad737);
+            
+        
+
+        circle_marker_7edde1be91d55af1f6e87a8dda3e0112.bindPopup(popup_26a942d5f435dcd86a68bcbbd1e9ec14)
+        ;
+
+        
+    
+    
+            var marker_b8996959b254089a3ed53df732324bbc = L.marker(
+                [44.8843443341, 20.6621289253],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_75ea36096b133e4542a7779c7af60b6d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_97070336d2e4b469c89aea052b38b2ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bef224610eb455f5534153afa1cb734 = $(`<div id="html_4bef224610eb455f5534153afa1cb734" style="width: 100.0%; height: 100.0%;">153</div>`)[0];
+                popup_97070336d2e4b469c89aea052b38b2ba.setContent(html_4bef224610eb455f5534153afa1cb734);
+            
+        
+
+        marker_b8996959b254089a3ed53df732324bbc.bindPopup(popup_97070336d2e4b469c89aea052b38b2ba)
+        ;
+
+        
+    
+    
+                marker_b8996959b254089a3ed53df732324bbc.setIcon(icon_75ea36096b133e4542a7779c7af60b6d);
+            
+    
+            var circle_marker_5427488a663ecff7366eccc8f7bb7fb9 = L.circleMarker(
+                [44.6641966766, 20.3540611267],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_b13eee08b3f44f823911e0290efe7cee = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abddf5fd5d45377b4dad78a7fe6e028d = $(`<div id="html_abddf5fd5d45377b4dad78a7fe6e028d" style="width: 100.0%; height: 100.0%;"><b>Čvor 129</b><br>Ruta: 2</div>`)[0];
+                popup_b13eee08b3f44f823911e0290efe7cee.setContent(html_abddf5fd5d45377b4dad78a7fe6e028d);
+            
+        
+
+        circle_marker_5427488a663ecff7366eccc8f7bb7fb9.bindPopup(popup_b13eee08b3f44f823911e0290efe7cee)
+        ;
+
+        
+    
+    
+            var marker_ad636665b8a0f25d1c4a58858123783d = L.marker(
+                [44.6641966766, 20.3540611267],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_c9ac9dbad5cbb3374d0cbce1c7ebdfc5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4a0a4e3d50294a910b571c12b373f5f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17d57481a5699e86f99f7bf1db58f95b = $(`<div id="html_17d57481a5699e86f99f7bf1db58f95b" style="width: 100.0%; height: 100.0%;">129</div>`)[0];
+                popup_4a0a4e3d50294a910b571c12b373f5f3.setContent(html_17d57481a5699e86f99f7bf1db58f95b);
+            
+        
+
+        marker_ad636665b8a0f25d1c4a58858123783d.bindPopup(popup_4a0a4e3d50294a910b571c12b373f5f3)
+        ;
+
+        
+    
+    
+                marker_ad636665b8a0f25d1c4a58858123783d.setIcon(icon_c9ac9dbad5cbb3374d0cbce1c7ebdfc5);
+            
+    
+            var circle_marker_09aa6dc5ee72398012df7211c0ec8893 = L.circleMarker(
+                [44.658196, 20.204941],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_170cb3d6bf60773212e98487ed2a3907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02d943ff85f182ae10f665048a25da10 = $(`<div id="html_02d943ff85f182ae10f665048a25da10" style="width: 100.0%; height: 100.0%;"><b>Čvor 52</b><br>Ruta: 2</div>`)[0];
+                popup_170cb3d6bf60773212e98487ed2a3907.setContent(html_02d943ff85f182ae10f665048a25da10);
+            
+        
+
+        circle_marker_09aa6dc5ee72398012df7211c0ec8893.bindPopup(popup_170cb3d6bf60773212e98487ed2a3907)
+        ;
+
+        
+    
+    
+            var marker_3f5917d3012fbbadda2eee8b1dde11ed = L.marker(
+                [44.658196, 20.204941],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_50181237b2058f0ec380ebeca4f40b7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42f1379b3e6199235dcfd957b069e6a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_284c9bddf208c62e5aa2df3bf7efd407 = $(`<div id="html_284c9bddf208c62e5aa2df3bf7efd407" style="width: 100.0%; height: 100.0%;">52</div>`)[0];
+                popup_42f1379b3e6199235dcfd957b069e6a3.setContent(html_284c9bddf208c62e5aa2df3bf7efd407);
+            
+        
+
+        marker_3f5917d3012fbbadda2eee8b1dde11ed.bindPopup(popup_42f1379b3e6199235dcfd957b069e6a3)
+        ;
+
+        
+    
+    
+                marker_3f5917d3012fbbadda2eee8b1dde11ed.setIcon(icon_50181237b2058f0ec380ebeca4f40b7e);
+            
+    
+            var circle_marker_66d6119f78d6d484531559be438784b7 = L.circleMarker(
+                [44.658196, 20.204941],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_8b085c95a17d0834b7a411762540c9ce = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de3d1b1d42146b64c0ac0b9aeaaff044 = $(`<div id="html_de3d1b1d42146b64c0ac0b9aeaaff044" style="width: 100.0%; height: 100.0%;"><b>Čvor 52</b><br>Ruta: 2</div>`)[0];
+                popup_8b085c95a17d0834b7a411762540c9ce.setContent(html_de3d1b1d42146b64c0ac0b9aeaaff044);
+            
+        
+
+        circle_marker_66d6119f78d6d484531559be438784b7.bindPopup(popup_8b085c95a17d0834b7a411762540c9ce)
+        ;
+
+        
+    
+    
+            var marker_392a94c48f375e933e05fcb5fe0b4ac2 = L.marker(
+                [44.658196, 20.204941],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_5bc3ae9d924510670608e32205eddda7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d71ce8eee2ea294463281c9804f61be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8bb3c3fe855f9ce67a8a4499b9a5bf67 = $(`<div id="html_8bb3c3fe855f9ce67a8a4499b9a5bf67" style="width: 100.0%; height: 100.0%;">52</div>`)[0];
+                popup_2d71ce8eee2ea294463281c9804f61be.setContent(html_8bb3c3fe855f9ce67a8a4499b9a5bf67);
+            
+        
+
+        marker_392a94c48f375e933e05fcb5fe0b4ac2.bindPopup(popup_2d71ce8eee2ea294463281c9804f61be)
+        ;
+
+        
+    
+    
+                marker_392a94c48f375e933e05fcb5fe0b4ac2.setIcon(icon_5bc3ae9d924510670608e32205eddda7);
+            
+    
+            var circle_marker_324889ecb181a6a06908ec31e28bce5e = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_eb0c06c91f9e0e92f37d3c8108ad4215 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_19a8ffadeb5b6d8d1c68e94e4481f919 = $(`<div id="html_19a8ffadeb5b6d8d1c68e94e4481f919" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 2</div>`)[0];
+                popup_eb0c06c91f9e0e92f37d3c8108ad4215.setContent(html_19a8ffadeb5b6d8d1c68e94e4481f919);
+            
+        
+
+        circle_marker_324889ecb181a6a06908ec31e28bce5e.bindPopup(popup_eb0c06c91f9e0e92f37d3c8108ad4215)
+        ;
+
+        
+    
+    
+            var marker_b2b60f3a00fd1b91aba90836f02545fe = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_8c57cea1ecb67a471df5c7e97788bb7b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b70a371c7603c2173ed9d3772f3eb55 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_30d2759971cbc551570d9046ed05b87f = $(`<div id="html_30d2759971cbc551570d9046ed05b87f" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_0b70a371c7603c2173ed9d3772f3eb55.setContent(html_30d2759971cbc551570d9046ed05b87f);
+            
+        
+
+        marker_b2b60f3a00fd1b91aba90836f02545fe.bindPopup(popup_0b70a371c7603c2173ed9d3772f3eb55)
+        ;
+
+        
+    
+    
+                marker_b2b60f3a00fd1b91aba90836f02545fe.setIcon(icon_8c57cea1ecb67a471df5c7e97788bb7b);
+            
+    
+            var poly_line_8f10f9a2d022091b3279157f3e5c2f46 = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [44.3059001714, 20.5680584908], [44.0289111894, 20.9017467499], [44.011043065, 20.9134197235], [43.9795370005, 21.2594461441], [43.9348966664, 21.3795661926], [44.371215, 20.94216], [44.442603, 20.700794], [44.6396051372, 20.5207657814], [44.6396051372, 20.5207657814], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_1b24ea6d602bf25fe57652330dfe52b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b0558d9a02eb2ba4172fce61d4f659a5 = $(`<div id="html_b0558d9a02eb2ba4172fce61d4f659a5" style="width: 100.0%; height: 100.0%;">Ruta 3</div>`)[0];
+                popup_1b24ea6d602bf25fe57652330dfe52b2.setContent(html_b0558d9a02eb2ba4172fce61d4f659a5);
+            
+        
+
+        poly_line_8f10f9a2d022091b3279157f3e5c2f46.bindPopup(popup_1b24ea6d602bf25fe57652330dfe52b2)
+        ;
+
+        
+    
+    
+            var circle_marker_3defbe8af5fe19748133ea9db5355fec = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_9dfecb237bba62de6bc7d9764d09c69f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d4c42e78ee409127cc8dc84e50bca19a = $(`<div id="html_d4c42e78ee409127cc8dc84e50bca19a" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 3</div>`)[0];
+                popup_9dfecb237bba62de6bc7d9764d09c69f.setContent(html_d4c42e78ee409127cc8dc84e50bca19a);
+            
+        
+
+        circle_marker_3defbe8af5fe19748133ea9db5355fec.bindPopup(popup_9dfecb237bba62de6bc7d9764d09c69f)
+        ;
+
+        
+    
+    
+            var marker_48b1683aa29acb60d604d10466bd18ae = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_d8fc47768937b20bf5e3c770224f337c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b607a5adf78b89df3795fb6a376b7ae0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe60b71c2858403f7e49c68e9d7d9b35 = $(`<div id="html_fe60b71c2858403f7e49c68e9d7d9b35" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_b607a5adf78b89df3795fb6a376b7ae0.setContent(html_fe60b71c2858403f7e49c68e9d7d9b35);
+            
+        
+
+        marker_48b1683aa29acb60d604d10466bd18ae.bindPopup(popup_b607a5adf78b89df3795fb6a376b7ae0)
+        ;
+
+        
+    
+    
+                marker_48b1683aa29acb60d604d10466bd18ae.setIcon(icon_d8fc47768937b20bf5e3c770224f337c);
+            
+    
+            var circle_marker_fa9d710535d58a1ccf145ae163886e24 = L.circleMarker(
+                [44.3059001714, 20.5680584908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_346afc38e7f65fd1802e2ebc985235e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f638678e50fc6f30961fa3150522335 = $(`<div id="html_8f638678e50fc6f30961fa3150522335" style="width: 100.0%; height: 100.0%;"><b>Čvor 47</b><br>Ruta: 3</div>`)[0];
+                popup_346afc38e7f65fd1802e2ebc985235e5.setContent(html_8f638678e50fc6f30961fa3150522335);
+            
+        
+
+        circle_marker_fa9d710535d58a1ccf145ae163886e24.bindPopup(popup_346afc38e7f65fd1802e2ebc985235e5)
+        ;
+
+        
+    
+    
+            var marker_1a885606ba5f3cce54302cb3cea509ec = L.marker(
+                [44.3059001714, 20.5680584908],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_5188815d210e7f750beea72f65b0fc1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5f94e56b1730981536dad4f27d08729 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_151684b1c912add64c9d7a027ec97172 = $(`<div id="html_151684b1c912add64c9d7a027ec97172" style="width: 100.0%; height: 100.0%;">47</div>`)[0];
+                popup_c5f94e56b1730981536dad4f27d08729.setContent(html_151684b1c912add64c9d7a027ec97172);
+            
+        
+
+        marker_1a885606ba5f3cce54302cb3cea509ec.bindPopup(popup_c5f94e56b1730981536dad4f27d08729)
+        ;
+
+        
+    
+    
+                marker_1a885606ba5f3cce54302cb3cea509ec.setIcon(icon_5188815d210e7f750beea72f65b0fc1a);
+            
+    
+            var circle_marker_d8b08cb9d8c46819764f4e2d513a4dfe = L.circleMarker(
+                [44.0289111894, 20.9017467499],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_dcf9799dadf472c85119acef3b07eae5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ca774be7c29a4e113afcc2907c7de312 = $(`<div id="html_ca774be7c29a4e113afcc2907c7de312" style="width: 100.0%; height: 100.0%;"><b>Čvor 68</b><br>Ruta: 3</div>`)[0];
+                popup_dcf9799dadf472c85119acef3b07eae5.setContent(html_ca774be7c29a4e113afcc2907c7de312);
+            
+        
+
+        circle_marker_d8b08cb9d8c46819764f4e2d513a4dfe.bindPopup(popup_dcf9799dadf472c85119acef3b07eae5)
+        ;
+
+        
+    
+    
+            var marker_03e19672f5f991f01288e50976558b95 = L.marker(
+                [44.0289111894, 20.9017467499],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_af6d6f09d36d07cb3bbe92baa05cf763 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_374a39620056fcff00043334411a6ac3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8da077d12f0b28c94c67c8c983fbc9b = $(`<div id="html_c8da077d12f0b28c94c67c8c983fbc9b" style="width: 100.0%; height: 100.0%;">68</div>`)[0];
+                popup_374a39620056fcff00043334411a6ac3.setContent(html_c8da077d12f0b28c94c67c8c983fbc9b);
+            
+        
+
+        marker_03e19672f5f991f01288e50976558b95.bindPopup(popup_374a39620056fcff00043334411a6ac3)
+        ;
+
+        
+    
+    
+                marker_03e19672f5f991f01288e50976558b95.setIcon(icon_af6d6f09d36d07cb3bbe92baa05cf763);
+            
+    
+            var circle_marker_01d7def1ce67917195500f015360371b = L.circleMarker(
+                [44.011043065, 20.9134197235],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_fd2e7b412ab42c1e7e183ad842e85918 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df26bfb5869456729d2f4b4fb03e36fc = $(`<div id="html_df26bfb5869456729d2f4b4fb03e36fc" style="width: 100.0%; height: 100.0%;"><b>Čvor 18</b><br>Ruta: 3</div>`)[0];
+                popup_fd2e7b412ab42c1e7e183ad842e85918.setContent(html_df26bfb5869456729d2f4b4fb03e36fc);
+            
+        
+
+        circle_marker_01d7def1ce67917195500f015360371b.bindPopup(popup_fd2e7b412ab42c1e7e183ad842e85918)
+        ;
+
+        
+    
+    
+            var marker_a5e14f5963463c92bb5243d29310386c = L.marker(
+                [44.011043065, 20.9134197235],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_1e818bd5163eb897e5c38682a1288d10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0852ab616f58edc7edab1854270a062 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7f49657d547e6651797b313f24cc7682 = $(`<div id="html_7f49657d547e6651797b313f24cc7682" style="width: 100.0%; height: 100.0%;">18</div>`)[0];
+                popup_d0852ab616f58edc7edab1854270a062.setContent(html_7f49657d547e6651797b313f24cc7682);
+            
+        
+
+        marker_a5e14f5963463c92bb5243d29310386c.bindPopup(popup_d0852ab616f58edc7edab1854270a062)
+        ;
+
+        
+    
+    
+                marker_a5e14f5963463c92bb5243d29310386c.setIcon(icon_1e818bd5163eb897e5c38682a1288d10);
+            
+    
+            var circle_marker_9046e7465a01de315dc50bbe4da26a77 = L.circleMarker(
+                [43.9795370005, 21.2594461441],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_42ef579c14a8e832fa4fa2caa7fbd861 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7cf2d4ee404dd318c14805a2d1f934a5 = $(`<div id="html_7cf2d4ee404dd318c14805a2d1f934a5" style="width: 100.0%; height: 100.0%;"><b>Čvor 66</b><br>Ruta: 3</div>`)[0];
+                popup_42ef579c14a8e832fa4fa2caa7fbd861.setContent(html_7cf2d4ee404dd318c14805a2d1f934a5);
+            
+        
+
+        circle_marker_9046e7465a01de315dc50bbe4da26a77.bindPopup(popup_42ef579c14a8e832fa4fa2caa7fbd861)
+        ;
+
+        
+    
+    
+            var marker_21f7eefe6d61ea189ae8bc0caee87ce6 = L.marker(
+                [43.9795370005, 21.2594461441],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_6a734319f4650e63df7ec744e791e964 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24ad91c605d10f2a93dfcad6042d7280 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c5bbd064d769f8aa732098f7eeafb8d8 = $(`<div id="html_c5bbd064d769f8aa732098f7eeafb8d8" style="width: 100.0%; height: 100.0%;">66</div>`)[0];
+                popup_24ad91c605d10f2a93dfcad6042d7280.setContent(html_c5bbd064d769f8aa732098f7eeafb8d8);
+            
+        
+
+        marker_21f7eefe6d61ea189ae8bc0caee87ce6.bindPopup(popup_24ad91c605d10f2a93dfcad6042d7280)
+        ;
+
+        
+    
+    
+                marker_21f7eefe6d61ea189ae8bc0caee87ce6.setIcon(icon_6a734319f4650e63df7ec744e791e964);
+            
+    
+            var circle_marker_8df3234c1102db6681ef5e63f839ac37 = L.circleMarker(
+                [43.9348966664, 21.3795661926],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_51c4ee24053ac3dd6f517c52118f753f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6aa5a930363e37d95d9bc896dac43c6f = $(`<div id="html_6aa5a930363e37d95d9bc896dac43c6f" style="width: 100.0%; height: 100.0%;"><b>Čvor 114</b><br>Ruta: 3</div>`)[0];
+                popup_51c4ee24053ac3dd6f517c52118f753f.setContent(html_6aa5a930363e37d95d9bc896dac43c6f);
+            
+        
+
+        circle_marker_8df3234c1102db6681ef5e63f839ac37.bindPopup(popup_51c4ee24053ac3dd6f517c52118f753f)
+        ;
+
+        
+    
+    
+            var marker_befd5dee3eb958e4ccc26fec40cc7315 = L.marker(
+                [43.9348966664, 21.3795661926],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_bbbea5604819495c004247f65d9dda43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b859a7315e80883c824da68a4df0a70 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_503456bf70e80ff1a428bdc01a3d6a17 = $(`<div id="html_503456bf70e80ff1a428bdc01a3d6a17" style="width: 100.0%; height: 100.0%;">114</div>`)[0];
+                popup_6b859a7315e80883c824da68a4df0a70.setContent(html_503456bf70e80ff1a428bdc01a3d6a17);
+            
+        
+
+        marker_befd5dee3eb958e4ccc26fec40cc7315.bindPopup(popup_6b859a7315e80883c824da68a4df0a70)
+        ;
+
+        
+    
+    
+                marker_befd5dee3eb958e4ccc26fec40cc7315.setIcon(icon_bbbea5604819495c004247f65d9dda43);
+            
+    
+            var circle_marker_b6944e0edc52fa8098ece0ddf60d9288 = L.circleMarker(
+                [44.371215, 20.94216],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_be68bcfc933a8d11a3483ba1f1060ecc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_abacd369e24fa5c62e60c5a78f91df98 = $(`<div id="html_abacd369e24fa5c62e60c5a78f91df98" style="width: 100.0%; height: 100.0%;"><b>Čvor 192</b><br>Ruta: 3</div>`)[0];
+                popup_be68bcfc933a8d11a3483ba1f1060ecc.setContent(html_abacd369e24fa5c62e60c5a78f91df98);
+            
+        
+
+        circle_marker_b6944e0edc52fa8098ece0ddf60d9288.bindPopup(popup_be68bcfc933a8d11a3483ba1f1060ecc)
+        ;
+
+        
+    
+    
+            var marker_0e6fc330d803d6b33a6bda8c80430837 = L.marker(
+                [44.371215, 20.94216],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_99a8574630012c90f44e1e818f40bbb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b0246c2857847a8f6e1810fadda4d651 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a834aab164643a5deef3f9e24289665 = $(`<div id="html_4a834aab164643a5deef3f9e24289665" style="width: 100.0%; height: 100.0%;">192</div>`)[0];
+                popup_b0246c2857847a8f6e1810fadda4d651.setContent(html_4a834aab164643a5deef3f9e24289665);
+            
+        
+
+        marker_0e6fc330d803d6b33a6bda8c80430837.bindPopup(popup_b0246c2857847a8f6e1810fadda4d651)
+        ;
+
+        
+    
+    
+                marker_0e6fc330d803d6b33a6bda8c80430837.setIcon(icon_99a8574630012c90f44e1e818f40bbb0);
+            
+    
+            var circle_marker_e17b40d8223d459b90ca051310ca00ce = L.circleMarker(
+                [44.442603, 20.700794],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_5d47b3e1742efa3103372854f3a05fb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0c990d2650b8446c98d267402956f0e3 = $(`<div id="html_0c990d2650b8446c98d267402956f0e3" style="width: 100.0%; height: 100.0%;"><b>Čvor 51</b><br>Ruta: 3</div>`)[0];
+                popup_5d47b3e1742efa3103372854f3a05fb9.setContent(html_0c990d2650b8446c98d267402956f0e3);
+            
+        
+
+        circle_marker_e17b40d8223d459b90ca051310ca00ce.bindPopup(popup_5d47b3e1742efa3103372854f3a05fb9)
+        ;
+
+        
+    
+    
+            var marker_4d5b591654637ad70799472a618679d6 = L.marker(
+                [44.442603, 20.700794],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ca62f9afaf217bed217c7540774df103 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e137516ef832a177fea191671ebbcea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c17baf59a6d061ef4713961ff8fb049d = $(`<div id="html_c17baf59a6d061ef4713961ff8fb049d" style="width: 100.0%; height: 100.0%;">51</div>`)[0];
+                popup_5e137516ef832a177fea191671ebbcea.setContent(html_c17baf59a6d061ef4713961ff8fb049d);
+            
+        
+
+        marker_4d5b591654637ad70799472a618679d6.bindPopup(popup_5e137516ef832a177fea191671ebbcea)
+        ;
+
+        
+    
+    
+                marker_4d5b591654637ad70799472a618679d6.setIcon(icon_ca62f9afaf217bed217c7540774df103);
+            
+    
+            var circle_marker_b9469383a1b06f83be98f9fd8fd82cf1 = L.circleMarker(
+                [44.6396051372, 20.5207657814],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_6f68a63c9f306141ed6fd5abb27603bf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4d971069477e3fffd4d634f9a524416 = $(`<div id="html_f4d971069477e3fffd4d634f9a524416" style="width: 100.0%; height: 100.0%;"><b>Čvor 98</b><br>Ruta: 3</div>`)[0];
+                popup_6f68a63c9f306141ed6fd5abb27603bf.setContent(html_f4d971069477e3fffd4d634f9a524416);
+            
+        
+
+        circle_marker_b9469383a1b06f83be98f9fd8fd82cf1.bindPopup(popup_6f68a63c9f306141ed6fd5abb27603bf)
+        ;
+
+        
+    
+    
+            var marker_662fc7505d19b0153ff3d2491d3dace7 = L.marker(
+                [44.6396051372, 20.5207657814],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_05b9cd5af4705fc8df7297411949faef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_219f9f28798594d20cab06ea85a070a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dead422032fe2fec5f01d14cc8345806 = $(`<div id="html_dead422032fe2fec5f01d14cc8345806" style="width: 100.0%; height: 100.0%;">98</div>`)[0];
+                popup_219f9f28798594d20cab06ea85a070a3.setContent(html_dead422032fe2fec5f01d14cc8345806);
+            
+        
+
+        marker_662fc7505d19b0153ff3d2491d3dace7.bindPopup(popup_219f9f28798594d20cab06ea85a070a3)
+        ;
+
+        
+    
+    
+                marker_662fc7505d19b0153ff3d2491d3dace7.setIcon(icon_05b9cd5af4705fc8df7297411949faef);
+            
+    
+            var circle_marker_24d87374f8cc19521991597e149497f9 = L.circleMarker(
+                [44.6396051372, 20.5207657814],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_e9756560b50ed354783e28114fc50238 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78e39d6e6ea78e463cac94d84877af0d = $(`<div id="html_78e39d6e6ea78e463cac94d84877af0d" style="width: 100.0%; height: 100.0%;"><b>Čvor 98</b><br>Ruta: 3</div>`)[0];
+                popup_e9756560b50ed354783e28114fc50238.setContent(html_78e39d6e6ea78e463cac94d84877af0d);
+            
+        
+
+        circle_marker_24d87374f8cc19521991597e149497f9.bindPopup(popup_e9756560b50ed354783e28114fc50238)
+        ;
+
+        
+    
+    
+            var marker_85c6bd8a1995e8a73e3b19d26485761c = L.marker(
+                [44.6396051372, 20.5207657814],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_931734d79bef9af584b705b3cea17a7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb172755fc3cc7feab3c02f92a67ccb5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed65af5b0e5a5496bffd1aa7bdd1134b = $(`<div id="html_ed65af5b0e5a5496bffd1aa7bdd1134b" style="width: 100.0%; height: 100.0%;">98</div>`)[0];
+                popup_fb172755fc3cc7feab3c02f92a67ccb5.setContent(html_ed65af5b0e5a5496bffd1aa7bdd1134b);
+            
+        
+
+        marker_85c6bd8a1995e8a73e3b19d26485761c.bindPopup(popup_fb172755fc3cc7feab3c02f92a67ccb5)
+        ;
+
+        
+    
+    
+                marker_85c6bd8a1995e8a73e3b19d26485761c.setIcon(icon_931734d79bef9af584b705b3cea17a7e);
+            
+    
+            var circle_marker_15690491742f8157a5827dd22d07a344 = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_c0fd88a791e479d899c0237661f7854c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71dd834ca343c1d230138a655129278f = $(`<div id="html_71dd834ca343c1d230138a655129278f" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 3</div>`)[0];
+                popup_c0fd88a791e479d899c0237661f7854c.setContent(html_71dd834ca343c1d230138a655129278f);
+            
+        
+
+        circle_marker_15690491742f8157a5827dd22d07a344.bindPopup(popup_c0fd88a791e479d899c0237661f7854c)
+        ;
+
+        
+    
+    
+            var marker_0336a939655b59a7017010e3dbb82868 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_c01ef0dbf7c5ba2a84ebcf5cd5e466d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2e17efa19b2632ca66a378dc48c73909 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3078456d340af473180e4177ef399431 = $(`<div id="html_3078456d340af473180e4177ef399431" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_2e17efa19b2632ca66a378dc48c73909.setContent(html_3078456d340af473180e4177ef399431);
+            
+        
+
+        marker_0336a939655b59a7017010e3dbb82868.bindPopup(popup_2e17efa19b2632ca66a378dc48c73909)
+        ;
+
+        
+    
+    
+                marker_0336a939655b59a7017010e3dbb82868.setIcon(icon_c01ef0dbf7c5ba2a84ebcf5cd5e466d6);
+            
+    
+            var poly_line_6558a39c92f818a7128577e75cfc5898 = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [43.8566102882, 19.8428535461], [43.731817144, 19.7008895874], [43.849893, 19.86064], [43.758139, 20.092603], [43.8799461564, 20.3579556942], [44.7910792343, 20.2704030275], [44.8242821427, 20.2247142792], [44.838114851, 20.2152299881], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_be90b0b91f6437a1f5bfb4a51faca383 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d0614b16e478b2cebe3d4d1385cd0e83 = $(`<div id="html_d0614b16e478b2cebe3d4d1385cd0e83" style="width: 100.0%; height: 100.0%;">Ruta 4</div>`)[0];
+                popup_be90b0b91f6437a1f5bfb4a51faca383.setContent(html_d0614b16e478b2cebe3d4d1385cd0e83);
+            
+        
+
+        poly_line_6558a39c92f818a7128577e75cfc5898.bindPopup(popup_be90b0b91f6437a1f5bfb4a51faca383)
+        ;
+
+        
+    
+    
+            var circle_marker_1ae6fac2fd0b366f5a4495a42049e8f8 = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_da3297808ffe41ff6f2bffba3c09f967 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_766ba4a9e89ddcd63c34396732f642e4 = $(`<div id="html_766ba4a9e89ddcd63c34396732f642e4" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 4</div>`)[0];
+                popup_da3297808ffe41ff6f2bffba3c09f967.setContent(html_766ba4a9e89ddcd63c34396732f642e4);
+            
+        
+
+        circle_marker_1ae6fac2fd0b366f5a4495a42049e8f8.bindPopup(popup_da3297808ffe41ff6f2bffba3c09f967)
+        ;
+
+        
+    
+    
+            var marker_63f43fbd690006b6bdf2cae40726f096 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_d96586edb089ff3b021e00c807889f14 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb2e7ae66964f2592c83951ffa0e7cbe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63355f846ca3a04dc0f6790a5bd82f3a = $(`<div id="html_63355f846ca3a04dc0f6790a5bd82f3a" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_eb2e7ae66964f2592c83951ffa0e7cbe.setContent(html_63355f846ca3a04dc0f6790a5bd82f3a);
+            
+        
+
+        marker_63f43fbd690006b6bdf2cae40726f096.bindPopup(popup_eb2e7ae66964f2592c83951ffa0e7cbe)
+        ;
+
+        
+    
+    
+                marker_63f43fbd690006b6bdf2cae40726f096.setIcon(icon_d96586edb089ff3b021e00c807889f14);
+            
+    
+            var circle_marker_7c84bc783e43ba97fc51341ad0b4e38a = L.circleMarker(
+                [43.8566102882, 19.8428535461],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_f0e26e06603bb9d8a6470da82b5c3067 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f4e0a5d78e990544677651139ceb804a = $(`<div id="html_f4e0a5d78e990544677651139ceb804a" style="width: 100.0%; height: 100.0%;"><b>Čvor 148</b><br>Ruta: 4</div>`)[0];
+                popup_f0e26e06603bb9d8a6470da82b5c3067.setContent(html_f4e0a5d78e990544677651139ceb804a);
+            
+        
+
+        circle_marker_7c84bc783e43ba97fc51341ad0b4e38a.bindPopup(popup_f0e26e06603bb9d8a6470da82b5c3067)
+        ;
+
+        
+    
+    
+            var marker_87b4902e53076a4bee6efe1c52b98bbd = L.marker(
+                [43.8566102882, 19.8428535461],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ab93d94fbdc59fbeac41f7b9063906ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3a29b3c48b98d4e712d9e8e1cbf5807 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50a138c131bb038ce5fba396a7cb91c9 = $(`<div id="html_50a138c131bb038ce5fba396a7cb91c9" style="width: 100.0%; height: 100.0%;">148</div>`)[0];
+                popup_d3a29b3c48b98d4e712d9e8e1cbf5807.setContent(html_50a138c131bb038ce5fba396a7cb91c9);
+            
+        
+
+        marker_87b4902e53076a4bee6efe1c52b98bbd.bindPopup(popup_d3a29b3c48b98d4e712d9e8e1cbf5807)
+        ;
+
+        
+    
+    
+                marker_87b4902e53076a4bee6efe1c52b98bbd.setIcon(icon_ab93d94fbdc59fbeac41f7b9063906ec);
+            
+    
+            var circle_marker_9e089e60eb5441b96076aa3196a23043 = L.circleMarker(
+                [43.731817144, 19.7008895874],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_742286d20c476f27c4e0cd1a27aae3c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a622d733d8f01d7eacc635f4c626e272 = $(`<div id="html_a622d733d8f01d7eacc635f4c626e272" style="width: 100.0%; height: 100.0%;"><b>Čvor 93</b><br>Ruta: 4</div>`)[0];
+                popup_742286d20c476f27c4e0cd1a27aae3c6.setContent(html_a622d733d8f01d7eacc635f4c626e272);
+            
+        
+
+        circle_marker_9e089e60eb5441b96076aa3196a23043.bindPopup(popup_742286d20c476f27c4e0cd1a27aae3c6)
+        ;
+
+        
+    
+    
+            var marker_bad8ad785b7c573d44e9db9c0071c755 = L.marker(
+                [43.731817144, 19.7008895874],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_4be9efb05794a0a17e7f29af3becb628 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a52867965d834c5a70c311b995c17aa5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45a9870de116f1516fa98fc3472e82dc = $(`<div id="html_45a9870de116f1516fa98fc3472e82dc" style="width: 100.0%; height: 100.0%;">93</div>`)[0];
+                popup_a52867965d834c5a70c311b995c17aa5.setContent(html_45a9870de116f1516fa98fc3472e82dc);
+            
+        
+
+        marker_bad8ad785b7c573d44e9db9c0071c755.bindPopup(popup_a52867965d834c5a70c311b995c17aa5)
+        ;
+
+        
+    
+    
+                marker_bad8ad785b7c573d44e9db9c0071c755.setIcon(icon_4be9efb05794a0a17e7f29af3becb628);
+            
+    
+            var circle_marker_6bb29997fcf8683aa6395eea45659f83 = L.circleMarker(
+                [43.849893, 19.86064],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_6b3a88ab17cc59217f1429b34b6328c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16f6aec82442f61c7a00a3d9bd72b704 = $(`<div id="html_16f6aec82442f61c7a00a3d9bd72b704" style="width: 100.0%; height: 100.0%;"><b>Čvor 178</b><br>Ruta: 4</div>`)[0];
+                popup_6b3a88ab17cc59217f1429b34b6328c8.setContent(html_16f6aec82442f61c7a00a3d9bd72b704);
+            
+        
+
+        circle_marker_6bb29997fcf8683aa6395eea45659f83.bindPopup(popup_6b3a88ab17cc59217f1429b34b6328c8)
+        ;
+
+        
+    
+    
+            var marker_8f947e10c9a8661e63eaca46a1ef9c15 = L.marker(
+                [43.849893, 19.86064],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_f7ccdd9649cfd64dfa9823215eea05fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ddf40561d64c95d6af996fcdf5acb1e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12591a418b34f5ca926b731835069361 = $(`<div id="html_12591a418b34f5ca926b731835069361" style="width: 100.0%; height: 100.0%;">178</div>`)[0];
+                popup_ddf40561d64c95d6af996fcdf5acb1e0.setContent(html_12591a418b34f5ca926b731835069361);
+            
+        
+
+        marker_8f947e10c9a8661e63eaca46a1ef9c15.bindPopup(popup_ddf40561d64c95d6af996fcdf5acb1e0)
+        ;
+
+        
+    
+    
+                marker_8f947e10c9a8661e63eaca46a1ef9c15.setIcon(icon_f7ccdd9649cfd64dfa9823215eea05fb);
+            
+    
+            var circle_marker_f8baf4cb167a8e3dd8eb58c8fd259636 = L.circleMarker(
+                [43.758139, 20.092603],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_fd4250a06dfabda859a120c8d5ced2a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b887975342b8b6dbfe0d4d24d95c9f7 = $(`<div id="html_5b887975342b8b6dbfe0d4d24d95c9f7" style="width: 100.0%; height: 100.0%;"><b>Čvor 4</b><br>Ruta: 4</div>`)[0];
+                popup_fd4250a06dfabda859a120c8d5ced2a6.setContent(html_5b887975342b8b6dbfe0d4d24d95c9f7);
+            
+        
+
+        circle_marker_f8baf4cb167a8e3dd8eb58c8fd259636.bindPopup(popup_fd4250a06dfabda859a120c8d5ced2a6)
+        ;
+
+        
+    
+    
+            var marker_357e55e7f1582570d93acbcf85356642 = L.marker(
+                [43.758139, 20.092603],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_dbf5759e741e5b8d0b01f469101c5220 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_020d95229db61bd780644e988068f0cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17a7e5ee9f881cdfe1b5ca8261741e01 = $(`<div id="html_17a7e5ee9f881cdfe1b5ca8261741e01" style="width: 100.0%; height: 100.0%;">4</div>`)[0];
+                popup_020d95229db61bd780644e988068f0cc.setContent(html_17a7e5ee9f881cdfe1b5ca8261741e01);
+            
+        
+
+        marker_357e55e7f1582570d93acbcf85356642.bindPopup(popup_020d95229db61bd780644e988068f0cc)
+        ;
+
+        
+    
+    
+                marker_357e55e7f1582570d93acbcf85356642.setIcon(icon_dbf5759e741e5b8d0b01f469101c5220);
+            
+    
+            var circle_marker_157f42bcb37cf308029c629cd2e7de16 = L.circleMarker(
+                [43.8799461564, 20.3579556942],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_aedd894ef6411ed99913deca84256bcf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32c1cb0849f0d5961ccecc906cd153d2 = $(`<div id="html_32c1cb0849f0d5961ccecc906cd153d2" style="width: 100.0%; height: 100.0%;"><b>Čvor 13</b><br>Ruta: 4</div>`)[0];
+                popup_aedd894ef6411ed99913deca84256bcf.setContent(html_32c1cb0849f0d5961ccecc906cd153d2);
+            
+        
+
+        circle_marker_157f42bcb37cf308029c629cd2e7de16.bindPopup(popup_aedd894ef6411ed99913deca84256bcf)
+        ;
+
+        
+    
+    
+            var marker_8a27f5bec1b0d33ab9ffd11ea8a02ef8 = L.marker(
+                [43.8799461564, 20.3579556942],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_d2b045c6ff52ee5ee51bc3132d3c8381 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e84bab199899d96996666b89ad138681 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_959b06581da6acb34a9e29f58e81beb2 = $(`<div id="html_959b06581da6acb34a9e29f58e81beb2" style="width: 100.0%; height: 100.0%;">13</div>`)[0];
+                popup_e84bab199899d96996666b89ad138681.setContent(html_959b06581da6acb34a9e29f58e81beb2);
+            
+        
+
+        marker_8a27f5bec1b0d33ab9ffd11ea8a02ef8.bindPopup(popup_e84bab199899d96996666b89ad138681)
+        ;
+
+        
+    
+    
+                marker_8a27f5bec1b0d33ab9ffd11ea8a02ef8.setIcon(icon_d2b045c6ff52ee5ee51bc3132d3c8381);
+            
+    
+            var circle_marker_97ba4814838a6340200a990342db7351 = L.circleMarker(
+                [44.7910792343, 20.2704030275],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_68d4f58c0a5809c754e802addc267447 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_889385a7551244c819db0ebef376805d = $(`<div id="html_889385a7551244c819db0ebef376805d" style="width: 100.0%; height: 100.0%;"><b>Čvor 60</b><br>Ruta: 4</div>`)[0];
+                popup_68d4f58c0a5809c754e802addc267447.setContent(html_889385a7551244c819db0ebef376805d);
+            
+        
+
+        circle_marker_97ba4814838a6340200a990342db7351.bindPopup(popup_68d4f58c0a5809c754e802addc267447)
+        ;
+
+        
+    
+    
+            var marker_6489ae6e1101c52a6bd15e7e05c1588b = L.marker(
+                [44.7910792343, 20.2704030275],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_b27fa34d3d78373c6cc33179efc99048 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af22e8dc39590ab38a1ae8b5be38d17e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0751f76c1752c07b77128737da63750f = $(`<div id="html_0751f76c1752c07b77128737da63750f" style="width: 100.0%; height: 100.0%;">60</div>`)[0];
+                popup_af22e8dc39590ab38a1ae8b5be38d17e.setContent(html_0751f76c1752c07b77128737da63750f);
+            
+        
+
+        marker_6489ae6e1101c52a6bd15e7e05c1588b.bindPopup(popup_af22e8dc39590ab38a1ae8b5be38d17e)
+        ;
+
+        
+    
+    
+                marker_6489ae6e1101c52a6bd15e7e05c1588b.setIcon(icon_b27fa34d3d78373c6cc33179efc99048);
+            
+    
+            var circle_marker_0400ca047a43e197d14765c5e28f77cf = L.circleMarker(
+                [44.8242821427, 20.2247142792],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_da6ff4d6f2bc209721734aa49f36a2ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c89692b71b1b43b1e358e5f046922be3 = $(`<div id="html_c89692b71b1b43b1e358e5f046922be3" style="width: 100.0%; height: 100.0%;"><b>Čvor 54</b><br>Ruta: 4</div>`)[0];
+                popup_da6ff4d6f2bc209721734aa49f36a2ad.setContent(html_c89692b71b1b43b1e358e5f046922be3);
+            
+        
+
+        circle_marker_0400ca047a43e197d14765c5e28f77cf.bindPopup(popup_da6ff4d6f2bc209721734aa49f36a2ad)
+        ;
+
+        
+    
+    
+            var marker_32f23ce4808530b3f58835b5b261b4b7 = L.marker(
+                [44.8242821427, 20.2247142792],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_e7860998f854405a6f29fbc995204d27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7218324c41819c63f7175c25cb55aee5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62a335a61995d38138cf73d12eae6547 = $(`<div id="html_62a335a61995d38138cf73d12eae6547" style="width: 100.0%; height: 100.0%;">54</div>`)[0];
+                popup_7218324c41819c63f7175c25cb55aee5.setContent(html_62a335a61995d38138cf73d12eae6547);
+            
+        
+
+        marker_32f23ce4808530b3f58835b5b261b4b7.bindPopup(popup_7218324c41819c63f7175c25cb55aee5)
+        ;
+
+        
+    
+    
+                marker_32f23ce4808530b3f58835b5b261b4b7.setIcon(icon_e7860998f854405a6f29fbc995204d27);
+            
+    
+            var circle_marker_334a5c4ef8a98295b99c07ba353db583 = L.circleMarker(
+                [44.838114851, 20.2152299881],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_6ddbbe90cb180568e24c9e9f7bc99863 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb90f61b4d4a42320f9819e9afad5736 = $(`<div id="html_eb90f61b4d4a42320f9819e9afad5736" style="width: 100.0%; height: 100.0%;"><b>Čvor 55</b><br>Ruta: 4</div>`)[0];
+                popup_6ddbbe90cb180568e24c9e9f7bc99863.setContent(html_eb90f61b4d4a42320f9819e9afad5736);
+            
+        
+
+        circle_marker_334a5c4ef8a98295b99c07ba353db583.bindPopup(popup_6ddbbe90cb180568e24c9e9f7bc99863)
+        ;
+
+        
+    
+    
+            var marker_4bad5bca785566670d0c6136e53a1b41 = L.marker(
+                [44.838114851, 20.2152299881],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_08dd6f4d4bf0568e74c1175f2a46aee4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd4a2cefdaa46fc7a74a457d76ed101a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44679dc35a6394041691f17361a8dce3 = $(`<div id="html_44679dc35a6394041691f17361a8dce3" style="width: 100.0%; height: 100.0%;">55</div>`)[0];
+                popup_cd4a2cefdaa46fc7a74a457d76ed101a.setContent(html_44679dc35a6394041691f17361a8dce3);
+            
+        
+
+        marker_4bad5bca785566670d0c6136e53a1b41.bindPopup(popup_cd4a2cefdaa46fc7a74a457d76ed101a)
+        ;
+
+        
+    
+    
+                marker_4bad5bca785566670d0c6136e53a1b41.setIcon(icon_08dd6f4d4bf0568e74c1175f2a46aee4);
+            
+    
+            var circle_marker_fe8d90151073ef5841cf00e68f2c857a = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_8e89268a0bfa8efc7b92ace39b926baf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a333bf1f9d681e84550bb0002c0ebdbc = $(`<div id="html_a333bf1f9d681e84550bb0002c0ebdbc" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 4</div>`)[0];
+                popup_8e89268a0bfa8efc7b92ace39b926baf.setContent(html_a333bf1f9d681e84550bb0002c0ebdbc);
+            
+        
+
+        circle_marker_fe8d90151073ef5841cf00e68f2c857a.bindPopup(popup_8e89268a0bfa8efc7b92ace39b926baf)
+        ;
+
+        
+    
+    
+            var marker_a17b55b2176a27e9de40cab61f493edf = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_5d7d4d26cb3b93872276b986735cc445 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6dbfc378e042956884b9df3c2c6dd4fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5de7f6bf08bfe002e5026f010627ac73 = $(`<div id="html_5de7f6bf08bfe002e5026f010627ac73" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_6dbfc378e042956884b9df3c2c6dd4fa.setContent(html_5de7f6bf08bfe002e5026f010627ac73);
+            
+        
+
+        marker_a17b55b2176a27e9de40cab61f493edf.bindPopup(popup_6dbfc378e042956884b9df3c2c6dd4fa)
+        ;
+
+        
+    
+    
+                marker_a17b55b2176a27e9de40cab61f493edf.setIcon(icon_5d7d4d26cb3b93872276b986735cc445);
+            
+    
+            var poly_line_60b3d8f5a9bd16a6e6430d57e8e7fd84 = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [43.58241, 21.32745], [43.6370069321, 20.9185910225], [43.7277934725, 20.6831252575], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_185153fc6132c7c6464e3bda1f236991 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8811c83015e6118523f48be718b8474 = $(`<div id="html_b8811c83015e6118523f48be718b8474" style="width: 100.0%; height: 100.0%;">Ruta 5</div>`)[0];
+                popup_185153fc6132c7c6464e3bda1f236991.setContent(html_b8811c83015e6118523f48be718b8474);
+            
+        
+
+        poly_line_60b3d8f5a9bd16a6e6430d57e8e7fd84.bindPopup(popup_185153fc6132c7c6464e3bda1f236991)
+        ;
+
+        
+    
+    
+            var circle_marker_da91f71427c23740cc7b81859a15c70b = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_c85133ac3d3ff51b13772604ee647ecb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8306c805e2b9dc3ef675816e3e095e5 = $(`<div id="html_c8306c805e2b9dc3ef675816e3e095e5" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 5</div>`)[0];
+                popup_c85133ac3d3ff51b13772604ee647ecb.setContent(html_c8306c805e2b9dc3ef675816e3e095e5);
+            
+        
+
+        circle_marker_da91f71427c23740cc7b81859a15c70b.bindPopup(popup_c85133ac3d3ff51b13772604ee647ecb)
+        ;
+
+        
+    
+    
+            var marker_a3dfc71bee34e6dccb082a508e2048d2 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ac408ecde6c5a07a117eecdeff1f8e2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_552fb61a66e729e5ce47fb7b53cc02aa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9a8955c7409bdd5b6531d617e05dacc4 = $(`<div id="html_9a8955c7409bdd5b6531d617e05dacc4" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_552fb61a66e729e5ce47fb7b53cc02aa.setContent(html_9a8955c7409bdd5b6531d617e05dacc4);
+            
+        
+
+        marker_a3dfc71bee34e6dccb082a508e2048d2.bindPopup(popup_552fb61a66e729e5ce47fb7b53cc02aa)
+        ;
+
+        
+    
+    
+                marker_a3dfc71bee34e6dccb082a508e2048d2.setIcon(icon_ac408ecde6c5a07a117eecdeff1f8e2d);
+            
+    
+            var circle_marker_8519981ca86b5b6c446e79564776f42e = L.circleMarker(
+                [43.58241, 21.32745],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_fb4194aed04b39db84c723e4ebc9e138 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb97e6be482ad3abfa5c6751c92e61f0 = $(`<div id="html_eb97e6be482ad3abfa5c6751c92e61f0" style="width: 100.0%; height: 100.0%;"><b>Čvor 20</b><br>Ruta: 5</div>`)[0];
+                popup_fb4194aed04b39db84c723e4ebc9e138.setContent(html_eb97e6be482ad3abfa5c6751c92e61f0);
+            
+        
+
+        circle_marker_8519981ca86b5b6c446e79564776f42e.bindPopup(popup_fb4194aed04b39db84c723e4ebc9e138)
+        ;
+
+        
+    
+    
+            var marker_9e80be6f27ffdbddd1bcb96024a01265 = L.marker(
+                [43.58241, 21.32745],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ccbd71400aca75776d5f835227f8cf41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfcf9650447c6a0ea14a5ca283d9b711 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e34bc5cf0f412c2f2fa618a98f17ab8 = $(`<div id="html_5e34bc5cf0f412c2f2fa618a98f17ab8" style="width: 100.0%; height: 100.0%;">20</div>`)[0];
+                popup_cfcf9650447c6a0ea14a5ca283d9b711.setContent(html_5e34bc5cf0f412c2f2fa618a98f17ab8);
+            
+        
+
+        marker_9e80be6f27ffdbddd1bcb96024a01265.bindPopup(popup_cfcf9650447c6a0ea14a5ca283d9b711)
+        ;
+
+        
+    
+    
+                marker_9e80be6f27ffdbddd1bcb96024a01265.setIcon(icon_ccbd71400aca75776d5f835227f8cf41);
+            
+    
+            var circle_marker_05daae121146936c9e9c24303b0bb061 = L.circleMarker(
+                [43.6370069321, 20.9185910225],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_f8044a3d01e75e9fd62286c7127fad1e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c8090a26c2045bcba1a88ea8229b9003 = $(`<div id="html_c8090a26c2045bcba1a88ea8229b9003" style="width: 100.0%; height: 100.0%;"><b>Čvor 123</b><br>Ruta: 5</div>`)[0];
+                popup_f8044a3d01e75e9fd62286c7127fad1e.setContent(html_c8090a26c2045bcba1a88ea8229b9003);
+            
+        
+
+        circle_marker_05daae121146936c9e9c24303b0bb061.bindPopup(popup_f8044a3d01e75e9fd62286c7127fad1e)
+        ;
+
+        
+    
+    
+            var marker_67a7c0625dcb7adcb839e21ed231133d = L.marker(
+                [43.6370069321, 20.9185910225],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_496634b06cc5e22c3eb94068252295da = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5a96b4c7f2ae2c511d606ce417c4dd8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13238abd60dd18250a303229ee790f45 = $(`<div id="html_13238abd60dd18250a303229ee790f45" style="width: 100.0%; height: 100.0%;">123</div>`)[0];
+                popup_5a96b4c7f2ae2c511d606ce417c4dd8e.setContent(html_13238abd60dd18250a303229ee790f45);
+            
+        
+
+        marker_67a7c0625dcb7adcb839e21ed231133d.bindPopup(popup_5a96b4c7f2ae2c511d606ce417c4dd8e)
+        ;
+
+        
+    
+    
+                marker_67a7c0625dcb7adcb839e21ed231133d.setIcon(icon_496634b06cc5e22c3eb94068252295da);
+            
+    
+            var circle_marker_cbd81bb65238fe4e1c032afee28f5c6b = L.circleMarker(
+                [43.7277934725, 20.6831252575],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_b8feea88fd07f96afea3e29b0f2e13b8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3073f23268c10649c6889d999b1a14f = $(`<div id="html_b3073f23268c10649c6889d999b1a14f" style="width: 100.0%; height: 100.0%;"><b>Čvor 70</b><br>Ruta: 5</div>`)[0];
+                popup_b8feea88fd07f96afea3e29b0f2e13b8.setContent(html_b3073f23268c10649c6889d999b1a14f);
+            
+        
+
+        circle_marker_cbd81bb65238fe4e1c032afee28f5c6b.bindPopup(popup_b8feea88fd07f96afea3e29b0f2e13b8)
+        ;
+
+        
+    
+    
+            var marker_3573d48b017f6ef0f78a582dfcb7ac0f = L.marker(
+                [43.7277934725, 20.6831252575],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_0d672116ef76df7eefb343b8828670a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96122bd5aff891c5a2294d0e4a067efe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_da0d5dfe174aabfa2247ee800f6e36a1 = $(`<div id="html_da0d5dfe174aabfa2247ee800f6e36a1" style="width: 100.0%; height: 100.0%;">70</div>`)[0];
+                popup_96122bd5aff891c5a2294d0e4a067efe.setContent(html_da0d5dfe174aabfa2247ee800f6e36a1);
+            
+        
+
+        marker_3573d48b017f6ef0f78a582dfcb7ac0f.bindPopup(popup_96122bd5aff891c5a2294d0e4a067efe)
+        ;
+
+        
+    
+    
+                marker_3573d48b017f6ef0f78a582dfcb7ac0f.setIcon(icon_0d672116ef76df7eefb343b8828670a3);
+            
+    
+            var circle_marker_320a0421398bc78dfeb7e1106350f997 = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_9ae137ad7868e1990f93a8d23f3bdfad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_499f4e0b3c44a15cc30c1624ce99dde3 = $(`<div id="html_499f4e0b3c44a15cc30c1624ce99dde3" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 5</div>`)[0];
+                popup_9ae137ad7868e1990f93a8d23f3bdfad.setContent(html_499f4e0b3c44a15cc30c1624ce99dde3);
+            
+        
+
+        circle_marker_320a0421398bc78dfeb7e1106350f997.bindPopup(popup_9ae137ad7868e1990f93a8d23f3bdfad)
+        ;
+
+        
+    
+    
+            var marker_a366655b41d4a9fc7acb1f25b5c11769 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_a6249ce7c0c264d442db1db28ef77996 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84b70064518a59532a91b290e927d62d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42929be665aaffe40c72fa9d0ffaa8a2 = $(`<div id="html_42929be665aaffe40c72fa9d0ffaa8a2" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_84b70064518a59532a91b290e927d62d.setContent(html_42929be665aaffe40c72fa9d0ffaa8a2);
+            
+        
+
+        marker_a366655b41d4a9fc7acb1f25b5c11769.bindPopup(popup_84b70064518a59532a91b290e927d62d)
+        ;
+
+        
+    
+    
+                marker_a366655b41d4a9fc7acb1f25b5c11769.setIcon(icon_a6249ce7c0c264d442db1db28ef77996);
+            
+    
+            var poly_line_ce5f4e519c001cb7ea425fcb3eac2dc4 = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [42.997344, 21.964448], [43.31618, 21.850582], [43.3239835154, 21.9069314003], [43.322993, 21.927015], [43.323449, 21.929644], [43.323449, 21.929644], [43.322993, 21.927015], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkred", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_bcaa2f5d2f0073bc2360a0d440bc3070 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_77c753cb74f28c4962b18e93e3dc21ff = $(`<div id="html_77c753cb74f28c4962b18e93e3dc21ff" style="width: 100.0%; height: 100.0%;">Ruta 6</div>`)[0];
+                popup_bcaa2f5d2f0073bc2360a0d440bc3070.setContent(html_77c753cb74f28c4962b18e93e3dc21ff);
+            
+        
+
+        poly_line_ce5f4e519c001cb7ea425fcb3eac2dc4.bindPopup(popup_bcaa2f5d2f0073bc2360a0d440bc3070)
+        ;
+
+        
+    
+    
+            var circle_marker_c6a26ed63e9209573f5c0daca4575fbc = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_58a0fae37aa4714c0d4019db34ed2de9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12ffbf478ae1f2f9284d6a1f307393b4 = $(`<div id="html_12ffbf478ae1f2f9284d6a1f307393b4" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 6</div>`)[0];
+                popup_58a0fae37aa4714c0d4019db34ed2de9.setContent(html_12ffbf478ae1f2f9284d6a1f307393b4);
+            
+        
+
+        circle_marker_c6a26ed63e9209573f5c0daca4575fbc.bindPopup(popup_58a0fae37aa4714c0d4019db34ed2de9)
+        ;
+
+        
+    
+    
+            var marker_e1fadbc373aa74f7b3c9234b98d78829 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_95ae127089617c1539a6e63b6138a74c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7b29ab32ab70c4ecd3172851e85b0f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5aa01efbe6aee4e55737c2d0cd8553fe = $(`<div id="html_5aa01efbe6aee4e55737c2d0cd8553fe" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_e7b29ab32ab70c4ecd3172851e85b0f9.setContent(html_5aa01efbe6aee4e55737c2d0cd8553fe);
+            
+        
+
+        marker_e1fadbc373aa74f7b3c9234b98d78829.bindPopup(popup_e7b29ab32ab70c4ecd3172851e85b0f9)
+        ;
+
+        
+    
+    
+                marker_e1fadbc373aa74f7b3c9234b98d78829.setIcon(icon_95ae127089617c1539a6e63b6138a74c);
+            
+    
+            var circle_marker_4e018615987d2935342776da8dee31e9 = L.circleMarker(
+                [42.997344, 21.964448],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_45f54e96a5dc39401b51bebc06a3a5eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c80688f32b4cf54ddb09ea3ba4ae1558 = $(`<div id="html_c80688f32b4cf54ddb09ea3ba4ae1558" style="width: 100.0%; height: 100.0%;"><b>Čvor 179</b><br>Ruta: 6</div>`)[0];
+                popup_45f54e96a5dc39401b51bebc06a3a5eb.setContent(html_c80688f32b4cf54ddb09ea3ba4ae1558);
+            
+        
+
+        circle_marker_4e018615987d2935342776da8dee31e9.bindPopup(popup_45f54e96a5dc39401b51bebc06a3a5eb)
+        ;
+
+        
+    
+    
+            var marker_238fcd4113ea56e4a3c8d2e9601f7000 = L.marker(
+                [42.997344, 21.964448],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_29dc4abf69159b7a42e5a4788adba531 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a83245f4a05ccfa5c5a534f6a3ee7c0a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d36609715c760f50539c6fa629508297 = $(`<div id="html_d36609715c760f50539c6fa629508297" style="width: 100.0%; height: 100.0%;">179</div>`)[0];
+                popup_a83245f4a05ccfa5c5a534f6a3ee7c0a.setContent(html_d36609715c760f50539c6fa629508297);
+            
+        
+
+        marker_238fcd4113ea56e4a3c8d2e9601f7000.bindPopup(popup_a83245f4a05ccfa5c5a534f6a3ee7c0a)
+        ;
+
+        
+    
+    
+                marker_238fcd4113ea56e4a3c8d2e9601f7000.setIcon(icon_29dc4abf69159b7a42e5a4788adba531);
+            
+    
+            var circle_marker_fab1c0c67658eaf4d088ea950d25c645 = L.circleMarker(
+                [43.31618, 21.850582],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_0728dd814963f3d799d302c9068ced6a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eee58e7dc5f3882c3b1eaa5b13e896fa = $(`<div id="html_eee58e7dc5f3882c3b1eaa5b13e896fa" style="width: 100.0%; height: 100.0%;"><b>Čvor 156</b><br>Ruta: 6</div>`)[0];
+                popup_0728dd814963f3d799d302c9068ced6a.setContent(html_eee58e7dc5f3882c3b1eaa5b13e896fa);
+            
+        
+
+        circle_marker_fab1c0c67658eaf4d088ea950d25c645.bindPopup(popup_0728dd814963f3d799d302c9068ced6a)
+        ;
+
+        
+    
+    
+            var marker_cc422f2e382f67c1dc592d608c4dfabf = L.marker(
+                [43.31618, 21.850582],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ee957f6dc8cbfab4001cf98079553c67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c4e3533941148becf6d884a443ce04a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c6990b1ee67a3680245b9d0dfb0fa76 = $(`<div id="html_2c6990b1ee67a3680245b9d0dfb0fa76" style="width: 100.0%; height: 100.0%;">156</div>`)[0];
+                popup_4c4e3533941148becf6d884a443ce04a.setContent(html_2c6990b1ee67a3680245b9d0dfb0fa76);
+            
+        
+
+        marker_cc422f2e382f67c1dc592d608c4dfabf.bindPopup(popup_4c4e3533941148becf6d884a443ce04a)
+        ;
+
+        
+    
+    
+                marker_cc422f2e382f67c1dc592d608c4dfabf.setIcon(icon_ee957f6dc8cbfab4001cf98079553c67);
+            
+    
+            var circle_marker_dced79a4c31528cd5771d3f17a03fb95 = L.circleMarker(
+                [43.3239835154, 21.9069314003],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_363e3df231740a90ff7696ece46cc700 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02c45fa155bb192ea774479d09bb1af3 = $(`<div id="html_02c45fa155bb192ea774479d09bb1af3" style="width: 100.0%; height: 100.0%;"><b>Čvor 21</b><br>Ruta: 6</div>`)[0];
+                popup_363e3df231740a90ff7696ece46cc700.setContent(html_02c45fa155bb192ea774479d09bb1af3);
+            
+        
+
+        circle_marker_dced79a4c31528cd5771d3f17a03fb95.bindPopup(popup_363e3df231740a90ff7696ece46cc700)
+        ;
+
+        
+    
+    
+            var marker_3db4122efd7d9ee823f0a1d24e2595dc = L.marker(
+                [43.3239835154, 21.9069314003],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_f243b35fe204abbc683120fd58705d99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_39978e1119e8093c8e3678fd4177bd14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc85417c3e735374672c61a3dc7afae9 = $(`<div id="html_fc85417c3e735374672c61a3dc7afae9" style="width: 100.0%; height: 100.0%;">21</div>`)[0];
+                popup_39978e1119e8093c8e3678fd4177bd14.setContent(html_fc85417c3e735374672c61a3dc7afae9);
+            
+        
+
+        marker_3db4122efd7d9ee823f0a1d24e2595dc.bindPopup(popup_39978e1119e8093c8e3678fd4177bd14)
+        ;
+
+        
+    
+    
+                marker_3db4122efd7d9ee823f0a1d24e2595dc.setIcon(icon_f243b35fe204abbc683120fd58705d99);
+            
+    
+            var circle_marker_d51ba35e833e44e5a0d97e2e2be7f0ee = L.circleMarker(
+                [43.322993, 21.927015],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_943e2581f14921c25100332b8759e403 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_059bf737faea303aba377fc63ecb64fc = $(`<div id="html_059bf737faea303aba377fc63ecb64fc" style="width: 100.0%; height: 100.0%;"><b>Čvor 173</b><br>Ruta: 6</div>`)[0];
+                popup_943e2581f14921c25100332b8759e403.setContent(html_059bf737faea303aba377fc63ecb64fc);
+            
+        
+
+        circle_marker_d51ba35e833e44e5a0d97e2e2be7f0ee.bindPopup(popup_943e2581f14921c25100332b8759e403)
+        ;
+
+        
+    
+    
+            var marker_b5a38cb1697a35a3a9188c03afe97338 = L.marker(
+                [43.322993, 21.927015],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_efc2a911f5a8df7f5db0cf9651ad0251 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6d067f530017b70a46282fd5683f89d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5489fa57b429775cf6831b3d4266d56 = $(`<div id="html_a5489fa57b429775cf6831b3d4266d56" style="width: 100.0%; height: 100.0%;">173</div>`)[0];
+                popup_b6d067f530017b70a46282fd5683f89d.setContent(html_a5489fa57b429775cf6831b3d4266d56);
+            
+        
+
+        marker_b5a38cb1697a35a3a9188c03afe97338.bindPopup(popup_b6d067f530017b70a46282fd5683f89d)
+        ;
+
+        
+    
+    
+                marker_b5a38cb1697a35a3a9188c03afe97338.setIcon(icon_efc2a911f5a8df7f5db0cf9651ad0251);
+            
+    
+            var circle_marker_50074ba370315939df804f199b2506d4 = L.circleMarker(
+                [43.323449, 21.929644],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_29f5ba7578c2aab241b40ed11632144f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c08683ff52bd70cf5245c0246427bb8a = $(`<div id="html_c08683ff52bd70cf5245c0246427bb8a" style="width: 100.0%; height: 100.0%;"><b>Čvor 113</b><br>Ruta: 6</div>`)[0];
+                popup_29f5ba7578c2aab241b40ed11632144f.setContent(html_c08683ff52bd70cf5245c0246427bb8a);
+            
+        
+
+        circle_marker_50074ba370315939df804f199b2506d4.bindPopup(popup_29f5ba7578c2aab241b40ed11632144f)
+        ;
+
+        
+    
+    
+            var marker_0ab26aa73d0e1d7d40200114d083f73d = L.marker(
+                [43.323449, 21.929644],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_4a194a32396a71ca5f4d5452fabb2184 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d40782e38dc92e06afe1c976d4f09853 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7261f9d0f3a36fc0dcf25eb01be5a804 = $(`<div id="html_7261f9d0f3a36fc0dcf25eb01be5a804" style="width: 100.0%; height: 100.0%;">113</div>`)[0];
+                popup_d40782e38dc92e06afe1c976d4f09853.setContent(html_7261f9d0f3a36fc0dcf25eb01be5a804);
+            
+        
+
+        marker_0ab26aa73d0e1d7d40200114d083f73d.bindPopup(popup_d40782e38dc92e06afe1c976d4f09853)
+        ;
+
+        
+    
+    
+                marker_0ab26aa73d0e1d7d40200114d083f73d.setIcon(icon_4a194a32396a71ca5f4d5452fabb2184);
+            
+    
+            var circle_marker_318bb14c378b2d82cdc5958a8eb13e68 = L.circleMarker(
+                [43.323449, 21.929644],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_cf3ec314f7013095a97ef1e3f8d12cb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_944ff1b96d45444e06ad8176158ef695 = $(`<div id="html_944ff1b96d45444e06ad8176158ef695" style="width: 100.0%; height: 100.0%;"><b>Čvor 113</b><br>Ruta: 6</div>`)[0];
+                popup_cf3ec314f7013095a97ef1e3f8d12cb9.setContent(html_944ff1b96d45444e06ad8176158ef695);
+            
+        
+
+        circle_marker_318bb14c378b2d82cdc5958a8eb13e68.bindPopup(popup_cf3ec314f7013095a97ef1e3f8d12cb9)
+        ;
+
+        
+    
+    
+            var marker_3b9102a49dede0959013d835827ea1ef = L.marker(
+                [43.323449, 21.929644],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_a6bbe4ff4ec5bdca7a90c1aef2983d88 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4bef7ff31dd3e9455ad564093f2bc91 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_943861717c10826196211b71887fa05d = $(`<div id="html_943861717c10826196211b71887fa05d" style="width: 100.0%; height: 100.0%;">113</div>`)[0];
+                popup_f4bef7ff31dd3e9455ad564093f2bc91.setContent(html_943861717c10826196211b71887fa05d);
+            
+        
+
+        marker_3b9102a49dede0959013d835827ea1ef.bindPopup(popup_f4bef7ff31dd3e9455ad564093f2bc91)
+        ;
+
+        
+    
+    
+                marker_3b9102a49dede0959013d835827ea1ef.setIcon(icon_a6bbe4ff4ec5bdca7a90c1aef2983d88);
+            
+    
+            var circle_marker_60cae5c370d63adf5701a67d32f0b696 = L.circleMarker(
+                [43.322993, 21.927015],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_5fef11e8783092e0ff1161d686221a9a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13d43a32fc70de8a764b51e8f81215a7 = $(`<div id="html_13d43a32fc70de8a764b51e8f81215a7" style="width: 100.0%; height: 100.0%;"><b>Čvor 173</b><br>Ruta: 6</div>`)[0];
+                popup_5fef11e8783092e0ff1161d686221a9a.setContent(html_13d43a32fc70de8a764b51e8f81215a7);
+            
+        
+
+        circle_marker_60cae5c370d63adf5701a67d32f0b696.bindPopup(popup_5fef11e8783092e0ff1161d686221a9a)
+        ;
+
+        
+    
+    
+            var marker_ccebb0938338eea4f8162ebec9c07370 = L.marker(
+                [43.322993, 21.927015],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_fe160ea3314161cc69751e9410df2df9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc47cd7b9265580f7da5ad8dafe582bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ed4657cc5eebcd14bf0406be11605151 = $(`<div id="html_ed4657cc5eebcd14bf0406be11605151" style="width: 100.0%; height: 100.0%;">173</div>`)[0];
+                popup_cc47cd7b9265580f7da5ad8dafe582bb.setContent(html_ed4657cc5eebcd14bf0406be11605151);
+            
+        
+
+        marker_ccebb0938338eea4f8162ebec9c07370.bindPopup(popup_cc47cd7b9265580f7da5ad8dafe582bb)
+        ;
+
+        
+    
+    
+                marker_ccebb0938338eea4f8162ebec9c07370.setIcon(icon_fe160ea3314161cc69751e9410df2df9);
+            
+    
+            var circle_marker_f8dad8352af2a6a172c009b52a688e6b = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_cb8852fca4fedaacb3209080ec5dcb23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6fa4feb0a99e01aea22d30e6118c8022 = $(`<div id="html_6fa4feb0a99e01aea22d30e6118c8022" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 6</div>`)[0];
+                popup_cb8852fca4fedaacb3209080ec5dcb23.setContent(html_6fa4feb0a99e01aea22d30e6118c8022);
+            
+        
+
+        circle_marker_f8dad8352af2a6a172c009b52a688e6b.bindPopup(popup_cb8852fca4fedaacb3209080ec5dcb23)
+        ;
+
+        
+    
+    
+            var marker_920bb4c5b19e758c7bbb12466bd51e8a = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_37bca502d7df4a3d63b1d582b2e11d03 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6020e736b7a97ab8d68f00160470789c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2a1feca7a3e3d123d2a252825cadf912 = $(`<div id="html_2a1feca7a3e3d123d2a252825cadf912" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_6020e736b7a97ab8d68f00160470789c.setContent(html_2a1feca7a3e3d123d2a252825cadf912);
+            
+        
+
+        marker_920bb4c5b19e758c7bbb12466bd51e8a.bindPopup(popup_6020e736b7a97ab8d68f00160470789c)
+        ;
+
+        
+    
+    
+                marker_920bb4c5b19e758c7bbb12466bd51e8a.setIcon(icon_37bca502d7df4a3d63b1d582b2e11d03);
+            
+    
+            var poly_line_01ca80e1cc610a2e7d6f7c3b566db560 = L.polyline(
+                [[44.9749459604401, 20.22819174374428], [42.535252, 21.904879], [42.460254, 21.766912], [42.460254, 21.766912], [42.997344, 21.964448], [44.9749459604401, 20.22819174374428]],
+                {"bubblingMouseEvents": true, "color": "darkblue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "darkblue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_3997fab19b4a2e3e7085bc6036cca79c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b3f2ea474efc027fae81e08ba345668e = $(`<div id="html_b3f2ea474efc027fae81e08ba345668e" style="width: 100.0%; height: 100.0%;">Ruta 7</div>`)[0];
+                popup_3997fab19b4a2e3e7085bc6036cca79c.setContent(html_b3f2ea474efc027fae81e08ba345668e);
+            
+        
+
+        poly_line_01ca80e1cc610a2e7d6f7c3b566db560.bindPopup(popup_3997fab19b4a2e3e7085bc6036cca79c)
+        ;
+
+        
+    
+    
+            var circle_marker_95803d183484a0bc358669a66070e421 = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_5e80618975e0b8b550f93ecc9741faf1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afd50c5299d04343bccfcce8e691682b = $(`<div id="html_afd50c5299d04343bccfcce8e691682b" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 7</div>`)[0];
+                popup_5e80618975e0b8b550f93ecc9741faf1.setContent(html_afd50c5299d04343bccfcce8e691682b);
+            
+        
+
+        circle_marker_95803d183484a0bc358669a66070e421.bindPopup(popup_5e80618975e0b8b550f93ecc9741faf1)
+        ;
+
+        
+    
+    
+            var marker_d4e3a2111a3c6fad9e8c5e576e8fbf4c = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_cb19b77e4b0902f385d03682bafa0d6d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f574c5af7721094a5dea495045f9a080 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d145a352519a585b25ed768a388fd36 = $(`<div id="html_4d145a352519a585b25ed768a388fd36" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_f574c5af7721094a5dea495045f9a080.setContent(html_4d145a352519a585b25ed768a388fd36);
+            
+        
+
+        marker_d4e3a2111a3c6fad9e8c5e576e8fbf4c.bindPopup(popup_f574c5af7721094a5dea495045f9a080)
+        ;
+
+        
+    
+    
+                marker_d4e3a2111a3c6fad9e8c5e576e8fbf4c.setIcon(icon_cb19b77e4b0902f385d03682bafa0d6d);
+            
+    
+            var circle_marker_b3c73fedf2bbc154601512dd44155d03 = L.circleMarker(
+                [42.535252, 21.904879],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_1efac9b5dc4c9d6b2f8c316a53bad2fb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ab43331d654cb98c99d3577261e891f = $(`<div id="html_0ab43331d654cb98c99d3577261e891f" style="width: 100.0%; height: 100.0%;"><b>Čvor 177</b><br>Ruta: 7</div>`)[0];
+                popup_1efac9b5dc4c9d6b2f8c316a53bad2fb.setContent(html_0ab43331d654cb98c99d3577261e891f);
+            
+        
+
+        circle_marker_b3c73fedf2bbc154601512dd44155d03.bindPopup(popup_1efac9b5dc4c9d6b2f8c316a53bad2fb)
+        ;
+
+        
+    
+    
+            var marker_b33c34443e7795326a7db77518a07e0f = L.marker(
+                [42.535252, 21.904879],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_f7ae4207218741c016b1cf4062f1f7c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28b73d0f9b592d086da528e2c4e6c1a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_258735f8d596f17920367c816e9dcd26 = $(`<div id="html_258735f8d596f17920367c816e9dcd26" style="width: 100.0%; height: 100.0%;">177</div>`)[0];
+                popup_28b73d0f9b592d086da528e2c4e6c1a2.setContent(html_258735f8d596f17920367c816e9dcd26);
+            
+        
+
+        marker_b33c34443e7795326a7db77518a07e0f.bindPopup(popup_28b73d0f9b592d086da528e2c4e6c1a2)
+        ;
+
+        
+    
+    
+                marker_b33c34443e7795326a7db77518a07e0f.setIcon(icon_f7ae4207218741c016b1cf4062f1f7c5);
+            
+    
+            var circle_marker_900cb06b25dc85f8cf9eab93ce16cc47 = L.circleMarker(
+                [42.460254, 21.766912],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_3459fad17091d20a4239ab6bd1ea07d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f3ff0afda47e5e69c088091cf44e714 = $(`<div id="html_3f3ff0afda47e5e69c088091cf44e714" style="width: 100.0%; height: 100.0%;"><b>Čvor 10</b><br>Ruta: 7</div>`)[0];
+                popup_3459fad17091d20a4239ab6bd1ea07d8.setContent(html_3f3ff0afda47e5e69c088091cf44e714);
+            
+        
+
+        circle_marker_900cb06b25dc85f8cf9eab93ce16cc47.bindPopup(popup_3459fad17091d20a4239ab6bd1ea07d8)
+        ;
+
+        
+    
+    
+            var marker_8513e162f155f46891f7e07c876141d9 = L.marker(
+                [42.460254, 21.766912],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ce4115fd42d8365b54984cbadc06b118 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7d946710531c9bb49c23e581552de3b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_decdf709a2b99b85eec1f89380947f57 = $(`<div id="html_decdf709a2b99b85eec1f89380947f57" style="width: 100.0%; height: 100.0%;">10</div>`)[0];
+                popup_7d946710531c9bb49c23e581552de3b5.setContent(html_decdf709a2b99b85eec1f89380947f57);
+            
+        
+
+        marker_8513e162f155f46891f7e07c876141d9.bindPopup(popup_7d946710531c9bb49c23e581552de3b5)
+        ;
+
+        
+    
+    
+                marker_8513e162f155f46891f7e07c876141d9.setIcon(icon_ce4115fd42d8365b54984cbadc06b118);
+            
+    
+            var circle_marker_30bc1ff43c178699f5b2273ca1a431ae = L.circleMarker(
+                [42.460254, 21.766912],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_4412181c9cd33835c04b7cdc4662197a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccaa34a45099bf97a980590a2af63ed2 = $(`<div id="html_ccaa34a45099bf97a980590a2af63ed2" style="width: 100.0%; height: 100.0%;"><b>Čvor 10</b><br>Ruta: 7</div>`)[0];
+                popup_4412181c9cd33835c04b7cdc4662197a.setContent(html_ccaa34a45099bf97a980590a2af63ed2);
+            
+        
+
+        circle_marker_30bc1ff43c178699f5b2273ca1a431ae.bindPopup(popup_4412181c9cd33835c04b7cdc4662197a)
+        ;
+
+        
+    
+    
+            var marker_6c425c667cb8cf7fbdbc04c732a20d2d = L.marker(
+                [42.460254, 21.766912],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_7604e87b718d9666ddadebbbd63a797d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55957c3cec22e12a4790334bd0797fa9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_096c32db139625ccaee2c4e0e7bc4f68 = $(`<div id="html_096c32db139625ccaee2c4e0e7bc4f68" style="width: 100.0%; height: 100.0%;">10</div>`)[0];
+                popup_55957c3cec22e12a4790334bd0797fa9.setContent(html_096c32db139625ccaee2c4e0e7bc4f68);
+            
+        
+
+        marker_6c425c667cb8cf7fbdbc04c732a20d2d.bindPopup(popup_55957c3cec22e12a4790334bd0797fa9)
+        ;
+
+        
+    
+    
+                marker_6c425c667cb8cf7fbdbc04c732a20d2d.setIcon(icon_7604e87b718d9666ddadebbbd63a797d);
+            
+    
+            var circle_marker_763c009b3801549c74519a7f552fa7c6 = L.circleMarker(
+                [42.997344, 21.964448],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_5c0c1e7c608cb31ea77ca7afee378f0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a61cee2b24cc8ab07383a4851ae9070e = $(`<div id="html_a61cee2b24cc8ab07383a4851ae9070e" style="width: 100.0%; height: 100.0%;"><b>Čvor 179</b><br>Ruta: 7</div>`)[0];
+                popup_5c0c1e7c608cb31ea77ca7afee378f0c.setContent(html_a61cee2b24cc8ab07383a4851ae9070e);
+            
+        
+
+        circle_marker_763c009b3801549c74519a7f552fa7c6.bindPopup(popup_5c0c1e7c608cb31ea77ca7afee378f0c)
+        ;
+
+        
+    
+    
+            var marker_b84bbfe481f6875585a0c706e0869577 = L.marker(
+                [42.997344, 21.964448],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_ffd1b73fde9a476d415d86ad2015e196 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11a73ecc9e3ac32c8dded2ce0d87c5a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_687eb3b8484031ba42146ceff30778a5 = $(`<div id="html_687eb3b8484031ba42146ceff30778a5" style="width: 100.0%; height: 100.0%;">179</div>`)[0];
+                popup_11a73ecc9e3ac32c8dded2ce0d87c5a8.setContent(html_687eb3b8484031ba42146ceff30778a5);
+            
+        
+
+        marker_b84bbfe481f6875585a0c706e0869577.bindPopup(popup_11a73ecc9e3ac32c8dded2ce0d87c5a8)
+        ;
+
+        
+    
+    
+                marker_b84bbfe481f6875585a0c706e0869577.setIcon(icon_ffd1b73fde9a476d415d86ad2015e196);
+            
+    
+            var circle_marker_cc23fa0bdc4edb0dff0a3550eb2dfc6e = L.circleMarker(
+                [44.9749459604401, 20.22819174374428],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+        var popup_78291c6be71cabd82deb892628dbcae4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_384be5a52ec24ead18f7b3129f4ebaef = $(`<div id="html_384be5a52ec24ead18f7b3129f4ebaef" style="width: 100.0%; height: 100.0%;"><b>Čvor 1</b><br>Ruta: 7</div>`)[0];
+                popup_78291c6be71cabd82deb892628dbcae4.setContent(html_384be5a52ec24ead18f7b3129f4ebaef);
+            
+        
+
+        circle_marker_cc23fa0bdc4edb0dff0a3550eb2dfc6e.bindPopup(popup_78291c6be71cabd82deb892628dbcae4)
+        ;
+
+        
+    
+    
+            var marker_51b1553945327e0e1e43f1fc7fac9c33 = L.marker(
+                [44.9749459604401, 20.22819174374428],
+                {
+}
+            ).addTo(map_ab5dbddad502022cf5ef9fec082a5d38);
+        
+    
+            var icon_a0c49255df89449468a95e3144dab3a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83d233267322f4faba2c90bf06710a9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_adb5004bac6e89d559fe0b6331b350a4 = $(`<div id="html_adb5004bac6e89d559fe0b6331b350a4" style="width: 100.0%; height: 100.0%;">1</div>`)[0];
+                popup_83d233267322f4faba2c90bf06710a9b.setContent(html_adb5004bac6e89d559fe0b6331b350a4);
+            
+        
+
+        marker_51b1553945327e0e1e43f1fc7fac9c33.bindPopup(popup_83d233267322f4faba2c90bf06710a9b)
+        ;
+
+        
+    
+    
+                marker_51b1553945327e0e1e43f1fc7fac9c33.setIcon(icon_a0c49255df89449468a95e3144dab3a1);
+            
+</script>
+</html>
