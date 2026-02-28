@@ -209,7 +209,7 @@ for sheet in instances:
                 #LPprogrami1.printaj_rute(frute_iz_res2, zao, sheet, "VRPB", frute_vozila, fbroj_ruta, ws3, objective, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
                 # ne treba LPprogrami1.izracunaj_vozila(rute_iz_res1, rute_vozila, broj_ruta, vreme_rute, vehicles)
                 wb3.save('data/hello_rjesenje.xlsx')
-                #crtaj_rute.crtaj(vector_opsti, frute_iz_res)
+                crtaj_rute.crtaj(vector_opsti, frute_iz_res)
                 
                 #ZA DIO SA OGRANIČENJEM TRAJANJA UTOVARA I ISTOVARA
                 print()
