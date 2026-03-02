@@ -7,7 +7,7 @@ import LPprogrami1Primjer,LPprogrami1aPrimjer, crtaj_rute, clarkWright
 #import dodatak5_fix_dict_fleet_utovar, najnovijiDodatak je bez dvaopt provjere, najnovijiDodatak3 je sa 2op proverom i prethodi dvojci
 from openpyxl import load_workbook
 from scipy.spatial import distance
-import itertools, simplejson, json
+import itertools, simplejson, jsonc
 #import dijkstra5
 import pulp
 from collections import defaultdict
