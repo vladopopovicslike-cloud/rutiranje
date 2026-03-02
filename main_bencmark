@@ -1,0 +1,238 @@
+import datetime as dt
+import xlsxwriter, ulazniPodaciPrimjer,rutepovrata2
+import  LPprogrami, clarkModul2, LPprogrami1,  najnovijiDodatak8b9primjer
+import LPprogrami1Primjer,LPprogrami1aPrimjer, crtaj_rute, clarkWright
+#8b savako sa svakim, 10b razvozne se prave dokle se može tovariti
+#najnovijiDodatak9 ima radi duže zbog elif iterator<len(fields)-2, 8 je onaj koji daje optimalno rješenje za D1 tj radi detaljno povezivanje
+#import dodatak5_fix_dict_fleet_utovar, najnovijiDodatak je bez dvaopt provjere, najnovijiDodatak3 je sa 2op proverom i prethodi dvojci
+from openpyxl import load_workbook
+from scipy.spatial import distance
+import itertools, simplejson, json
+#import dijkstra5
+import pulp
+from collections import defaultdict
+from pulp import *
+global a_time,workbook3, tlong
+import pickle, random
+from random import choice
+import numpy as np
+f = open('data/hello_instance.txt','a');f.write("16 paleta ***************************************")
+
+def print_result(tekst):
+        global a_time
+        b_time=dt.datetime.now()
+        trajanje=(b_time-a_time).seconds
+        #print (tekst + ".  " + "Vreme:" + str (trajanje)+"s")
+        a_time=dt.datetime.now()
+a1=dt.datetime.now()
+
+#vehicles = {'kombi': (5, 0.0005, 20, 1500, 1, 5), 'kamion_3.5t':(15, 0.0007, 20, 3500, 2, 7), 'kamion_7t': (20, 0.0009, 10, 7000, 3, 9)}
+
+
+#wb = load_workbook(filename = 'D:\Google Drive\VOLI_konacno.xlsx')
+#wb1 = load_workbook(filename = 'D:\Google Drive\Matrica_voli.xlsx')
+#wb2 = load_workbook(filename = 'D:\Google Drive\Matrica_voli_time.xlsx')
+""" Učitavaju se instance za tstiranje iz wb, matrica rastojanja iz wb1, matrica vremena iz wb2, a u wb3 se upisuju rezultati za svaku od instanci. """
+wb = load_workbook(filename = 'data/instances_sve.xlsx')
+wb1 = load_workbook(filename = 'data/hello.xlsx')
+wb2 = load_workbook(filename = 'data/hello_time.xlsx')
+#wb3 = load_workbook('data/hello_rjesenje.xlsx')
+wb3 = load_workbook('data/bencmark_rjesenja.xlsx')
+ws3 = wb3["Sheet1"]; ws4 = wb3["Sheet2"]; ws5 = wb3["Sheet3"]; ws6 = wb3["Sheet4"] 
+instances=["GN4"]
+
+#instances=["GD1"]
+#9.7.23. kad se radi rjesavanje benchmark instanci potrebno je u najnovijiDodatak8b9primjer je smaknuti ogranicenje od 9h i staviti 90000 (samo da bude ogrroman broj da ne utice) i staviti za mj=1.
+#U lp treba dodati ograničenje o broju ruta
+
+for sheet in instances:
+        print()
+        print()
+        oznaka=sheet[0:3]
+        rute_iz_res=defaultdict(list)
+        rute_iz_resui=defaultdict(list)
+
+        a_time=dt.datetime.now()
+        """ ovo sheet[0:2] sluzi da bi se od stringa koji predstavlja promjenljiva sheet uzme samo dio strinda od 0-2 koji je zapravo i naziv sheeta u excelu """
+        ws=wb[sheet]
+        ws1=wb1[sheet[0:2]]; ws2=wb2[sheet[0:2]]
+        """ ovo se sve čita iz podataka iz o instanci: ukupan broj čvorova koji je potrebno obići, koliko je moguće natovariti jedinica u vozilo, koji je dozvoljeni broj vozila-ruta, kolika je minimalna f-ja cilja """
+        damp=sheet+".damp"; #brojCvorova=ws1.max_row
+        brojCvorova=int(sheet[2:]); nosivost_cll= ws["I4"].value; br_vozila=ws["J4"].value; granica=0; benchm_broj_ruta=str(ws["J4"].value); benchm_objective=str(ws["K4"].value);strnos_cll= str(ws["I4"].value)
+        """ vehicles rječnik u kome je ključ tip vozila, a vrijednosti: nosivost cll (zavisi od instance), trošak po m (samo za realni problem),
+        broj vozila ovog tipa (za realni), nosivost kg (za realni), pristupnost objektu i trošak pokretanja"""
+        vehicles = {'kombi': (nosivost_cll, 0.0005, 20, 1500, 1, 5)};br_koleta=0
+                
+        print ("krece racunanje VRPB" + sheet)
+        brk=200
+        vector_opsti=[0 for x in range(brk+1)]
+        #for i in range(1, brk+1):
+                #vector_opsti[i]=[float(ws.cell(row = abs(i), column = 1).value),float(ws.cell(row = abs(i), column = 2).value)]
+
+        #sve_seme=postavkaUlaza.generisanje_sema(1)
+        #break
+        #print sve_seme        
+        sve_seme=[1]
+        s=-1; sh=[1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33, 1,11,2,22,3,33]
+        ws_sema={1:ws3, 11:ws4, 2:ws3, 22:ws4, 3:ws3, 33:ws4}; ws_sema_ui={1:ws5, 11:ws6, 2:ws5, 22:ws6, 3:ws5, 33:ws6}
+        brt=ws5.max_row
+        for sema in sve_seme:
+                rute_iz_res=defaultdict(list)
+                rute_iz_resui=defaultdict(list)
+                #(randomklijenti_poz,kolicine_poz,randomklijenti_neg,kolicine_neg,randomklijenti_svi)=sema
+                #strs=str(sh[s])
+                strs=oznaka
+                s=s+1;strws=ws_sema[sh[s]];strws_ui=ws_sema_ui[sh[s]]
+                if sh[s]<10:
+                        brt=brt+1; #broj tesiranih podinsaci kao kod. povecava se kad se sema promijeni podinstanca
+                        print("broj testiranih podinstanci:", brt)
+                        f.write(str(brt))
+                #sheet=str(nosivost_cll)+oznaka+str(brt)
+                sheet=oznaka
+                f.write(str(brt)+str(sh[s])+"\n")
+                #f.write("randomklijenti_poz="+ str(randomklijenti_poz)+ "\n"); f.write("kolicine_poz="+ str(kolicine_poz)+ "\n"); f.write("randomklijenti_neg="+ str(randomklijenti_neg)+ "\n");f.write("kolicine_neg="+ str(kolicine_neg)+ "\n");f.write("randomklijenti_svi="+ str(randomklijenti_svi)+ "\n"); 
+                        
+                """randomklijenti_poz=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+                kolicine_poz={1: 0, 2: 483L, 3: 389L, 4: 435L, 5: 452L, 6: 343L, 7: 444L, 8: 350L, 9: 307L, 10: 810L, 11: 1002L, 12: 476L, 13: 674L, 14: 691L, 15: 675L, 16: 410L, 17: 351L, 18: 786L, 19: 59L, 20: 362L, 21: 550L}
+                randomklijenti_neg=[-22, -23, -24, -25, -26]
+                kolicine_neg={1: 0, -26: 194L, -25: 388L, -24: 851L, -23: 558L, -22: 549L}
+                randomklijenti_svi=randomklijenti_poz+randomklijenti_neg"""
+                brojCvorova=ws1.max_row
+                randomklijenti_poz=[];kolicine_poz=defaultdict(list);randomklijenti_neg=[];kolicine_neg=defaultdict(list);kolicine_poz[1]=0;kolicine_neg[1]=0
+                for i in range(1,brojCvorova+1):  
+                        if ws.cell(row = i, column = 3).value>0:
+                                randomklijenti_poz.append(i)
+                                kolicine_poz[i]=(ws.cell(row = i, column = 3).value)
+                        elif ws.cell(row = i, column = 3).value<0:
+                                randomklijenti_neg.append(-i); 
+                                kolicine_neg[-i]=(ws.cell(row = i, column = 3).value)
+                randomklijenti_svi=randomklijenti_poz+randomklijenti_neg
+
+                (dsv,tsv, zao)=ulazniPodaciPrimjer.izracunaj_matricu_opstu (ws, ws1, ws2,brk, randomklijenti_poz, kolicine_poz, randomklijenti_neg, kolicine_neg)
+                #break
+                #print ("odredjuje se matrica za sve klijente i matrica samo za klijente do kojih se razvozi")
+                """računa se matrica najkracih rastojanja izmedju svih cvorova i isporukama i sa povratom"""
+                #(dsv,tsv, zao)=ulazniPodaci.izracunaj_matricu_opstu(ws, ws1, ws2, brojCvorova, -1000000)
+                #vreme_rada=nosivost_cll+((brojCvorova-1)/(br_koleta/nosivost_cll))*100+10000000
+                vreme_rada=90000000
+                print("vreme rada:", vreme_rada)
+
+                """ računanje matrice rastojanja samo za klijente za koje se roba isporučuje + depo (zato stoji nula u argumentu), gdje cvorovi dobijaju nove brojeve koji se smjestaju u listu fields sa prvim clanom skladistem (1) """
+                (d,durations, osobine,broj_klijenata, vector, br_koleta, uk_masa)=ulazniPodaciPrimjer.izracunaj_matricu(ws, ws1, ws2, brk, 0, randomklijenti_poz, kolicine_poz)
+                
+                
+                #print ("sad se odredjuju gigantske razvozne")
+                b_time=dt.datetime.now()
+                """ end predstavlja max vrijednost za taboo"""
+                end=max(5,round((broj_klijenata-1)/4.5))
+                #end=min(15,round(br_klijenata_poz/4.5))
+              
+                """ ovaj modul isporučujw rute razvoza. to su različite kombinacije covrova koji se nalaze u pozitivnoj matrici.
+                Najmanje moze biti jedan, a najviše za svaku taboo vrijednos po jedno rješenje (plus obrnuto) i plus pocetno za klark. Svako od rješenja se kroz pripremu za dijsktru cjepkaju na pojedinacne rute"""
+
+                """ako se uzimaju velike rute razvoza kao rjesenje od TSP sa povratkom u bazu"""
+                #rute_razvoza=clarkModul1novi3.racunaj(d,vector, broj_klijenata, end)
+                rute_razvoza=defaultdict(list)
+                
+                """ovo je za slucaj kada se uzimaju rjesenja bez povrata u bazu. moze da ukljuci i prethodne rute ako se ostave ukljucene kao argument za sledece."""
+                #rute_razvoza=clarkModul2novi2.racunaj(d,vector, broj_klijenata, end, rute_razvoza)
+                rute_razvoza=clarkWright.racunaj(d,rute_razvoza)
+                
+                c_time=dt.datetime.now(); calc_time=(c_time-b_time).seconds 
+                print("trajanje racunanje gigantskih ruta razvoza", calc_time)
+                
+                #print ("sad se rade gigantske povratne")
+                """Računa se matrica rastojanja između klijenata sa povratom. U ovom slucaju fields se zavrsavaju sa skladistem, tj cvorom 1.
+                Zato ce morati imati i svoj Clarck modul jer ce za razliku od razvoza poslenji cvor biti 1 odmah clark nije isti"""
+                (d1,durations1, osobine1,broj_klijenata1, vector1, br_koleta1, uk_masa1)=ulazniPodaciPrimjer.izracunaj_matricu_neg(ws, ws1, ws2, brk, 0, randomklijenti_neg, kolicine_neg)
+                fields=list(range(2,broj_klijenata1+1))+[1]
+                d_time=dt.datetime.now()
+                """lista rute_povrata prestavlja skup gigantskih ruta povrata u kojima je svaki od čvorova sa povratom prvi bar jednoj.
+                Neki cvor sa povratom može imati i nekoliko gigantskih ruta. Svaka od njih uključuje sve ostale čvorove sa povratom i završava u čvoru 1"""
+                rute_povrata=rutepovrata2.lista_ruta(d1,vector1, broj_klijenata1, fields, broj_klijenata1)
+                rute_povrata_sortirane=sorted(rute_povrata.items(), key=lambda x: x[1])
+                #print "rute_povrata_sortirane", rute_povrata_sortirane
+                e_time=dt.datetime.now(); calc_time=(e_time-d_time).seconds
+                print("trajanje racunanje gigantskih povratnih", calc_time)
+                
+                f_time=dt.datetime.now()
+                rute_razvoza_sortirane=sorted(rute_razvoza.items(), key=lambda x: x[1])
+
+                g_time=dt.datetime.now(); calc_time=(g_time-f_time).seconds
+                (routes2,skup_povratnih_svih)=najnovijiDodatak8b9primjer.spoji_rute (rute_razvoza_sortirane, rute_povrata, vehicles, osobine,osobine1, dsv,zao, vreme_rada,tsv)
+                #routes3=najnovijiDodatak8b10primjer.spoji_rute (rute_razvoza_sortirane[0:1], rute_povrata_sortirane[0:1], vehicles, osobine,osobine1, dsv,zao,vreme_rada,tsv)
+                #routes3=najnovijiDodatak8b11.spoji_rute (rute_razvoza_sortirane[0:2], rute_povrata_sortirane[0:2], vehicles, osobine,osobine1, dsv,zao,skup_povratnih_svih)
+
+                """ Ovdje se dodaju u skup za izbor konacnog rjesenja sve rute koje su dobijene spajanjem"""
+                rute_iz_res.update(routes2)
+                #rute_iz_res.update(routes3)
+                
+                #print "cjepkanje povratnih i kalemljenje na razvozne" + str(calc_time)
+                                        
+                ukupno_mogucih_ruta=len(rute_iz_res)
+                print("ukupno broj mogucih ruta:", ukupno_mogucih_ruta)
+
+                """Ovdje se bira skup najboljih tako da svaki cvor bude samo jednom ukljucen. Jedino sto moze biti problem je da se rijesenje ne moze naci za zadati broj ruta.
+                Ovdje ne treba prebacivati u stare brojeve jer je vec sve vraceno pa je zato False"""
+                "ako se slucajno zbog ogranicenja za broj ruta, ne dobije rjesenje koje je izvodljvio, broj dozvoljenih ruta-vozila se povećavaja dok se ne dobije optimalno rjesenje"
+                #pickle.dump(rute_iz_res, open(damp, 'wb'))
+                #rute_iz_res = pickle.load(open(damp, 'rb'))
+                status="nemoguce"
+                #while (not (status=="Optimal" or status== "Stopped on time limit")):
+                while not status=="Optimal":
+                        (frute_iz_res, frute_vozila, fbroj_ruta, fvreme_rute, objective1, status)=LPprogrami1Primjer.izracunaj_rute(randomklijenti_svi, rute_iz_res, vehicles, osobine, False, br_vozila)
+                        br_vozila+=1
+                        print(status)
+                        print(br_vozila)
+                        #print array_1d
+
+              
+                h_time=dt.datetime.now(); calc_time=(h_time-g_time).seconds
+                print("racubanje rjesenja", calc_time)
+                LPprogrami1.printaj_rute(frute_iz_res, zao, oznaka, "VRPB"+strs, frute_vozila, fbroj_ruta, strws, objective1, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
+
+                benchm_objective=str(objective1); benchm_broj_ruta=str(fbroj_ruta["kombi"])
+                #(frute_iz_res2, frute_vozila, objective)=Inter_routePrimjer.testiraj(frute_iz_res, vehicles, dsv, zao, vreme_rada)
+                #r_time=dt.datetime.now(); calc_time=(r_time-g_time).seconds
+                #print "ukupno sekundi" + str(calc_time)
+                
+                #LPprogrami1.printaj_rute(frute_iz_res2, zao, sheet, "VRPB", frute_vozila, fbroj_ruta, ws3, objective, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
+                # ne treba LPprogrami1.izracunaj_vozila(rute_iz_res1, rute_vozila, broj_ruta, vreme_rute, vehicles)
+                wb3.save('data/bencmark_rjesenja.xlsx')
+                #crtaj_rute.crtaj(vector_opsti, frute_iz_res)
+
+
+
+                """
+                #ZA DIO SA OGRANIČENJEM TRAJANJA UTOVARA I ISTOVARA
+                print
+                print " Sada dio za LP sa ograničenjima"
+                g_time=dt.datetime.now()
+                (routes2ui,skup_povratnih_svih)=najnovijiDodatak8b9primjer.spoji_rute (rute_razvoza_sortirane, rute_povrata, vehicles, osobine,osobine1, dsv,zao, 3,tsv)
+                rute_iz_resui.update(routes2ui)
+                ukupno_mogucih_ruta=len(rute_iz_resui)
+                print "ukupno broj mogucih ruta:" + str(ukupno_mogucih_ruta)
+
+                #rute_iz_res = pickle.load(open(damp, 'rb'))
+                status="nemoguce"
+                while (not (status=="Optimal" or status== "Stopped on time limit")):
+                #while not status=="Optimal":
+                        (frute_iz_res, frute_vozila, fbroj_ruta, fvreme_rute, objective, status)=LPprogrami1aPrimjer.izracunaj_rute(randomklijenti_svi, rute_iz_resui, vehicles, osobine, False, br_vozila)
+                        br_vozila+=1
+                        print status
+                        print br_vozila
+                        
+                h_time=dt.datetime.now(); calc_time=(h_time-g_time).seconds
+                print "racubanje rjesenja" + str(calc_time)
+                LPprogrami1.printaj_rute(frute_iz_res, zao, sheet, "VRPBsaUI"+strs, frute_vozila, fbroj_ruta, strws_ui, objective, status, benchm_broj_ruta, str(objective1), ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
+                #(frute_iz_res2, frute_vozila, objective)=Inter_routePrimjer.testiraj(frute_iz_res, vehicles, dsv, zao, vreme_rada)
+                #r_time=dt.datetime.now(); calc_time=(r_time-g_time).seconds
+                #print "ukupno sekundi" + str(calc_time)
+                
+                #LPprogrami1.printaj_rute(frute_iz_res2, zao, sheet, "VRPB", frute_vozila, fbroj_ruta, ws3, objective, status, benchm_broj_ruta,benchm_objective, ukupno_mogucih_ruta, broj_klijenata-1, broj_klijenata1-1, strnos_cll, 1, ukupno_mogucih_ruta,calc_time)
+                # ne treba LPprogrami1.izracunaj_vozila(rute_iz_res1, rute_vozila, broj_ruta, vreme_rute, vehicles)
+                
+                wb3.save('data/hello_rjesenje.xlsx')"""
+f.close()
+
+
