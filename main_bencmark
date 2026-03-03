@@ -50,9 +50,9 @@ wb2 = load_workbook(filename = 'data/hello_time.xlsx')
 wb3 = load_workbook('data/bencmark_rjesenja.xlsx')
 ws3 = wb3["Sheet1"]; ws4 = wb3["Sheet2"]; ws5 = wb3["Sheet3"]; ws6 = wb3["Sheet4"] 
 #instances=["GA1", "GA2", "GA3", "GB1", "GB2", "GB3", "GC1", "GC2", "GC3", "GD1", "GD2", "GD3"] 
-instances=["GE1", "GE2", "GE3", "GF1", "GF2", "GF3", "GG1", "GG2", "GG3", "GH1", "GH2", "GH3"]
+#instances=["GE1", "GE2", "GE3", "GF1", "GF2", "GF3", "GG1", "GG2", "GG3", "GH1", "GH2", "GH3"]
 
-#instances=["GD1"]
+instances=["GH2"]
 #9.7.23. kad se radi rjesavanje benchmark instanci potrebno je u najnovijiDodatak8b9primjer je smaknuti ogranicenje od 9h i staviti 90000 (samo da bude ogrroman broj da ne utice) i staviti za mj=1.
 #U lp treba dodati ograničenje o broju ruta
 
