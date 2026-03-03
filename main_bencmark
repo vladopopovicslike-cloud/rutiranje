@@ -1,5 +1,5 @@
 import datetime as dt
-import xlsxwriter, ulazniPodaciPrimjer,rutepovrata2
+import ulazniPodaciPrimjer,rutepovrata2
 import  LPprogrami, clarkModul2, LPprogrami1,  najnovijiDodatak8b9primjer
 import LPprogrami1Primjer,LPprogrami1aPrimjer, crtaj_rute, clarkWright
 #8b savako sa svakim, 10b razvozne se prave dokle se može tovariti
@@ -7,7 +7,7 @@ import LPprogrami1Primjer,LPprogrami1aPrimjer, crtaj_rute, clarkWright
 #import dodatak5_fix_dict_fleet_utovar, najnovijiDodatak je bez dvaopt provjere, najnovijiDodatak3 je sa 2op proverom i prethodi dvojci
 from openpyxl import load_workbook
 from scipy.spatial import distance
-import itertools, simplejson, jsonc
+import itertools, simplejson, json  # jsonc not available; use standard json or simplejson
 #import dijkstra5
 import pulp
 from collections import defaultdict
@@ -30,8 +30,8 @@ a1=dt.datetime.now()
 # Maksimalno trajanje rute u satima (arbajt) i mjerna jedinica za udaljenosti (mj)
 # arbajt: maksimalno dozvoljeno trajanje rute (npr. 9 sati)
 # mj: 1 = metri, 1000 = kilometri
-arbajt = 9
-mj = 1000
+arbajt = 90000
+mj = 1
 
 # Whether to enforce the fixed-number-of-routes constraint in LP (`rutabroj`)
 # Set to False to disable the constraint when calling `izracunaj_rute`
@@ -49,7 +49,8 @@ wb2 = load_workbook(filename = 'data/hello_time.xlsx')
 #wb3 = load_workbook('data/hello_rjesenje.xlsx')
 wb3 = load_workbook('data/bencmark_rjesenja.xlsx')
 ws3 = wb3["Sheet1"]; ws4 = wb3["Sheet2"]; ws5 = wb3["Sheet3"]; ws6 = wb3["Sheet4"] 
-instances=["GN4"]
+#instances=["GA1", "GA2", "GA3", "GB1", "GB2", "GB3", "GC1", "GC2", "GC3", "GD1", "GD2", "GD3"] 
+instances=["GE1", "GE2", "GE3", "GF1", "GF2", "GF3", "GG1", "GG2", "GG3", "GH1", "GH2", "GH3"]
 
 #instances=["GD1"]
 #9.7.23. kad se radi rjesavanje benchmark instanci potrebno je u najnovijiDodatak8b9primjer je smaknuti ogranicenje od 9h i staviti 90000 (samo da bude ogrroman broj da ne utice) i staviti za mj=1.

@@ -34,7 +34,7 @@ mj = 1000
 
 # Whether to enforce the fixed-number-of-routes constraint in LP (`rutabroj`)
 # Set to False to disable the constraint when calling `izracunaj_rute`
-include_rutabroj = True
+include_rutabroj = False
 
 #vehicles = {'kombi': (5, 0.0005, 20, 1500, 1, 5), 'kamion_3.5t':(15, 0.0007, 20, 3500, 2, 7), 'kamion_7t': (20, 0.0009, 10, 7000, 3, 9)}
 
