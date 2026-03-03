@@ -14,7 +14,7 @@ import pickle
 broj_reda=0
 import numpy as np
 
-def izracunaj_rute(klijenti, routes, vehicles, osobine, prebacivanje, rutabroj):
+def izracunaj_rute(klijenti, routes, vehicles, osobine, prebacivanje, rutabroj, include_rutabroj):
     path_to_cplex = r'C:\Program Files\SCIPOptSuite 7.0.3\bin\scip.exe'
     guests=klijenti
     #print "guests", guests
@@ -45,7 +45,8 @@ def izracunaj_rute(klijenti, routes, vehicles, osobine, prebacivanje, rutabroj):
                                     if guest in dictOfroutes[key][0]) == 1
     
         
-    #routing_model += LpAffineExpression((x[key],1) for key in keys)==rutabroj
+    if include_rutabroj:
+        routing_model += LpAffineExpression((x[key],1) for key in keys)==rutabroj
     
     #for key in keys:
         #routing_model += x[key]*routes[dictOfroutes[key]][8]<=3
